@@ -16,13 +16,13 @@ def c2(n):
     z = np.zeros(N)
     z[-2 * m:] = 1
     #     def create_KKT(G,A,C,z,n,m,p,N):
-    kkt = create_kkt(G, A, C, z, n, m, p, N)
+    kkt = create_kkt_c2(G, A, C, z, n, m, p, N)
     niter = 100
     loop = True
-    rhv = -create_rhv(z, G, A, C, g, b, d, n, m, p, N)
+    rhv = -create_rhv_c2(z, G, A, C, g, b, d, n, m, p, N)
     iloop = 0
     while loop and iloop < niter:
-        loop, z, kkt, rhv = algorithm(z, kkt, rhv, G, A, C, g, b, d, n, m, p, N)
+        loop, z, kkt, rhv = algorithm_c2(z, kkt, rhv, G, A, C, g, b, d, n, m, p, N)
         iloop = iloop + 1
     print('n: {}\niters: {}\nz+g: {}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
 

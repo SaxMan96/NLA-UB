@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def create_dz_c4_1(z, dz_small, rhv, n, m, N):
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -9,19 +10,20 @@ def create_dz_c4_1(z, dz_small, rhv, n, m, N):
     dz[-m:] = (-r3 - s * dz[-2 * m:-m]) / lbd
     return dz
 
+
 def create_dz_c4_2(z, dz_small, rhv, C, n, m, N):
     lbd = z[-2 * m:-m]
     s = z[-m:]
     r2 = -rhv[-2 * m:-m]
     r3 = -rhv[-m:]
-    # print('dz_small:{} r2:{} r3:{} lbd:{} s:{} C:{}'.format(dz_small.shape,r2.shape,r3.shape,lbd.shape,s.shape,C.shape))
     dz = np.zeros(N)
     dz[:n] = dz_small
     dz[-2 * m:-m] = (-r3 + lbd * r2) / s - np.matmul(C.T, dz_small) * lbd / s
     dz[-m:] = -r2 + np.matmul(C.T, dz_small)
     return dz
 
-def create_kkt(G, A, C, z, n, m, p, N):
+
+def create_kkt_c2(G, A, C, z, n, m, p, N):
     kkt = np.zeros((N, N))
     kkt[0:n, 0:n] = G
     kkt[n:n + p, 0:n] = -A.T
@@ -33,39 +35,39 @@ def create_kkt(G, A, C, z, n, m, p, N):
     kkt[-m:, -m:] = np.diag(z[-2 * m:-m])
     return kkt
 
+
 # strategy 1
-def create_kkt_c4_1(G, C, z, n, m, N):
-    # def create_strat1_matrix(G,C,z,n,m):
+def create_kkt_c4_1(G, C, z, n, m):
     lbd = z[-2 * m:-m]
     s = z[-m:]
-    matrix = np.zeros((n + m, n + m))
-    matrix[:n, :n] = G
-    matrix[:n, n:] = -C
-    matrix[n:, :n] = -C.T
-    matrix[-m:, -m:] = np.diag(-s / lbd)
-    return matrix
+    kkt = np.zeros((n + m, n + m))
+    kkt[:n, :n] = G
+    kkt[:n, n:] = -C
+    kkt[n:, :n] = -C.T
+    kkt[-m:, -m:] = np.diag(-s / lbd)
+    return kkt
 
-# strategy 2
-def create_kkt_c4_2(G, C, z, n, m, N):
+
+def create_kkt_c4_2(G, C, z, m, ):
     lbd = z[-2 * m:-m]
     s = z[-m:]
-    matrix = G + np.matmul(C / s * lbd, C.T)
-    matrix = np.array(matrix)
-    # print('matrix:{} {}'.format(type(matrix),matrix.shape))
-    return matrix
+    kkt = G + np.matmul(C / s * lbd, C.T)
+    kkt = np.array(kkt)
+    return kkt
 
 
-def create_rhv(z, G, A, C, g, b, d, n, m, p, N):
+def create_rhv_c2(z, G, A, C, g, b, d, n, m, p, N):
     x = z[:n]
     gmm = z[n:n + p]
     lbd = z[-2 * m:-m]
     s = z[-m:]
-    F = np.zeros(N)
-    F[:n] = np.matmul(G, x) + g - np.matmul(A, gmm) - np.matmul(C, lbd)
-    F[n:n + p] = b - np.matmul(A.T, x)
-    F[-2 * m:-m] = s + d - np.matmul(C.T, x)
-    F[-m:] = s * lbd
-    return F
+    rvh = np.zeros(N)
+    rvh[:n] = np.matmul(G, x) + g - np.matmul(A, gmm) - np.matmul(C, lbd)
+    rvh[n:n + p] = b - np.matmul(A.T, x)
+    rvh[-2 * m:-m] = s + d - np.matmul(C.T, x)
+    rvh[-m:] = s * lbd
+    return rvh
+
 
 def create_rhv_c4_1(z, G, C, g, d, n, m, N):
     x = z[:n]
@@ -77,8 +79,8 @@ def create_rhv_c4_1(z, G, C, g, d, n, m, N):
     rhv[-m:] = s * lbd
     return -rhv
 
+
 def create_rhv_small_c4_1(z, rhv, n, m, N):
-    # def create_strat1_rhv(z,G,C,g,d,n,m,N):
     lbd = z[-2 * m:-m]
     r1 = -rhv[:n]
     r2 = -rhv[-2 * m:-m]
@@ -88,6 +90,7 @@ def create_rhv_small_c4_1(z, rhv, n, m, N):
     small_rhv[-m:] = -r2 + r3 / lbd
     return small_rhv
 
+
 def create_small_rhv_c4_2(z, rhv, C, n, m, N):
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -96,6 +99,7 @@ def create_small_rhv_c4_2(z, rhv, C, n, m, N):
     r3 = -rhv[-m:]
     small_rhv = -r1 - np.matmul(-C / s, -r3 + r2 * lbd)
     return small_rhv
+
 
 def lu_np(A):
     # Without pivoting
@@ -116,9 +120,9 @@ def lu_np(A):
 def ldl(A):
     n = len(A)
     L, U = lu_np(A)
-    diag_U = np.array([U[i, i] for i in range(n)])
-    D = np.diag(diag_U)
-    LT = np.array([U[i] / diag_U[i] for i in range(n)])
+    diag_u = np.array([U[i, i] for i in range(n)])
+    D = np.diag(diag_u)
+    LT = np.array([U[i] / diag_u[i] for i in range(n)])
     return L, D, LT
 
 
@@ -129,6 +133,7 @@ def cholo(A):
     GT = LT * d
     return G, GT
 
+
 def strat1_ldl(A, b):
     n = len(A)
     L, D, LT = ldl(A)
@@ -136,6 +141,7 @@ def strat1_ldl(A, b):
     LTX = np.array([DLTX[i] / D[i, i] for i in range(n)])
     dz = bckwd_subs(LT, LTX)
     return dz
+
 
 def frwd_subs(L, b):
     n = len(L)
@@ -180,7 +186,7 @@ def newton_step(lamb0, dlamb, s0, ds):
     return alp
 
 
-def algorithm(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
+def algorithm_c2(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
     epsilon = 1e-16
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -203,8 +209,8 @@ def algorithm(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
     alpha = newton_step(lbd, d_lbd, s, d_s)
     # update substep
     z = z + 0.95 * alpha * d_z
-    hessian = create_kkt(G, A, C, z, n, m, p, N)
-    rhv = -create_rhv(z, G, A, C, g, b, d, n, m, p, N)
+    hessian = create_kkt_c2(G, A, C, z, n, m, p, N)
+    rhv = -create_rhv_c2(z, G, A, C, g, b, d, n, m, p, N)
     norm_rL = np.linalg.norm(rhv[:n])
     norm_rC = np.linalg.norm(rhv[n:n + p])
     if norm_rL < epsilon:
@@ -217,6 +223,7 @@ def algorithm(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
         print('mu')
         return False, z, hessian, rhv
     return True, z, hessian, rhv
+
 
 def algorithm_c4_1(z, hessian, rhv, G, C, g, d, n, m, N):
     epsilon = 1e-16
@@ -245,7 +252,7 @@ def algorithm_c4_1(z, hessian, rhv, G, C, g, d, n, m, N):
     alpha = newton_step(lbd, d_lbd, s, d_s)
     # update substep
     z = z + 0.95 * alpha * d_z
-    hessian = create_kkt_c4_1(G, C, z, n, m, N)
+    hessian = create_kkt_c4_1(G, C, z, n, m)
     rhv = create_rhv_c4_1(z, G, C, g, d, n, m, N)
     norm_rL = np.linalg.norm(rhv[:n])
     # norm_rC = np.linalg.norm(rhv[n:n+p])
@@ -288,7 +295,7 @@ def algorithm_c4_2(z, hessian, rhv, G, C, g, d, n, m, N):
     alpha = newton_step(lbd, d_lbd, s, d_s)
     # update substep
     z = z + 0.95 * alpha * d_z
-    hessian = create_kkt_c4_2(G, C, z, n, m, N)
+    hessian = create_kkt_c4_2(G, C, z, m, )
     rhv = create_rhv_c4_1(z, G, C, g, d, n, m, N)
     norm_rL = np.linalg.norm(rhv[:n])
     # norm_rC = np.linalg.norm(rhv[n:n+p])
@@ -302,4 +309,3 @@ def algorithm_c4_2(z, hessian, rhv, G, C, g, d, n, m, N):
         print('mu')
         return False, z, hessian, rhv
     return True, z, hessian, rhv
-

@@ -12,7 +12,7 @@ def c4_1(n):
     g = np.random.rand(n)
     z = np.zeros(N)
     z[-2 * m:] = 1
-    small_KKT = create_kkt_c4_1(G, C, z, n, m, N)
+    small_KKT = create_kkt_c4_1(G, C, z, n, m)
     niter = 100
     loop = True
     rhv = create_rhv_c4_1(z, G, C, g, d, n, m, N)
