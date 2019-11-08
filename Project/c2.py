@@ -1,8 +1,7 @@
 from utilities import *
 
-n = 10
 
-if __name__ == '__main__':
+def c2(n):
     m = 2 * n
     p = 0
     N = n + p + 2 * m
@@ -17,12 +16,16 @@ if __name__ == '__main__':
     z = np.zeros(N)
     z[-2 * m:] = 1
     #     def create_KKT(G,A,C,z,n,m,p,N):
-    KKT = create_kkt(G, A, C, z, n, m, p, N)
+    kkt = create_kkt(G, A, C, z, n, m, p, N)
     niter = 100
     loop = True
     rhv = -create_rhv(z, G, A, C, g, b, d, n, m, p, N)
     iloop = 0
     while loop and iloop < niter:
-        loop, z, KKT, rhv = algorithm(z, KKT, rhv, G, A, C, g, b, d, n, m, p, N)
+        loop, z, kkt, rhv = algorithm(z, kkt, rhv, G, A, C, g, b, d, n, m, p, N)
         iloop = iloop + 1
-    print('n:{} iters:{} z+g:{}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
+    print('n: {}\niters: {}\nz+g: {}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
+
+
+if __name__ == '__main__':
+    c2(100)
