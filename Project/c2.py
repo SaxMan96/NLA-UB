@@ -1,7 +1,7 @@
 from utilities import *
 
 
-def c2(n):
+def c2(n, verbosity=0):
     m = 2 * n
     p = 0
     N = n + p + 2 * m
@@ -24,7 +24,9 @@ def c2(n):
     while loop and iloop < niter:
         loop, z, kkt, rhv = algorithm_c2(z, kkt, rhv, G, A, C, g, b, d, n, m, p, N)
         iloop = iloop + 1
-    print('n: {}\niters: {}\nz+g: {}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
+    if verbosity:
+        
+        print('n: {}\niters: {}\nz+g: {}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
 
 
 if __name__ == '__main__':

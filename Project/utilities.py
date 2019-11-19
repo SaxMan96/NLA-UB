@@ -186,7 +186,7 @@ def newton_step(lamb0, dlamb, s0, ds):
     return alp
 
 
-def algorithm_c2(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
+def algorithm_c2(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N, verbosity=0):
     epsilon = 1e-16
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -214,18 +214,21 @@ def algorithm_c2(z, hessian, rhv, G, A, C, g, b, d, n, m, p, N):
     norm_rL = np.linalg.norm(rhv[:n])
     norm_rC = np.linalg.norm(rhv[n:n + p])
     if norm_rL < epsilon:
-        print('norm_rL')
+        if verbosity:
+            print('norm_rL')
         return False, z, hessian, rhv
     if norm_rC < epsilon and rhv[n:n + p].size > 0:
-        print('rC:{} shape:{} norm_rC:{}'.format(rhv[n:n + p], rhv[n:n + p].shape, norm_rC))
+        if verbosity:
+            print('rC:{} shape:{} norm_rC:{}'.format(rhv[n:n + p], rhv[n:n + p].shape, norm_rC))
         return False, z, hessian, rhv
     if abs(mu) < epsilon:
-        print('mu')
+        if verbosity:
+            print('mu')
         return False, z, hessian, rhv
     return True, z, hessian, rhv
 
 
-def algorithm_c4_1(z, hessian, rhv, G, C, g, d, n, m, N):
+def algorithm_c4_1(z, hessian, rhv, G, C, g, d, n, m, N, verbosity=0):
     epsilon = 1e-16
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -257,18 +260,20 @@ def algorithm_c4_1(z, hessian, rhv, G, C, g, d, n, m, N):
     norm_rL = np.linalg.norm(rhv[:n])
     # norm_rC = np.linalg.norm(rhv[n:n+p])
     if norm_rL < epsilon:
-        print('norm_rL')
+        if verbosity:
+            print('norm_rL')
         return False, z, hessian, rhv
     # if norm_rC<epsilon and rhv[n:n+p].size>0 :
     #    print('rC:{} shape:{} norm_rC:{}'.format(rhv[n:n+p],rhv[n:n+p].shape,norm_rC))
     #   return False, z, hessian, rhv
     if abs(mu) < epsilon:
-        print('mu')
+        if verbosity:
+            print('mu')
         return False, z, hessian, rhv
     return True, z, hessian, rhv
 
 
-def algorithm_c4_2(z, hessian, rhv, G, C, g, d, n, m, N):
+def algorithm_c4_2(z, hessian, rhv, G, C, g, d, n, m, N, verbosity=0):
     epsilon = 1e-16
     lbd = z[-2 * m:-m]
     s = z[-m:]
@@ -300,12 +305,14 @@ def algorithm_c4_2(z, hessian, rhv, G, C, g, d, n, m, N):
     norm_rL = np.linalg.norm(rhv[:n])
     # norm_rC = np.linalg.norm(rhv[n:n+p])
     if norm_rL < epsilon:
-        print('norm_rL')
+        if verbosity:
+            print('norm_rL')
         return False, z, hessian, rhv
     # if norm_rC<epsilon and rhv[n:n+p].size>0 :
     #    print('rC:{} shape:{} norm_rC:{}'.format(rhv[n:n+p],rhv[n:n+p].shape,norm_rC))
     #   return False, z, hessian, rhv
     if abs(mu) < epsilon:
-        print('mu')
+        if verbosity:
+            print('mu')
         return False, z, hessian, rhv
     return True, z, hessian, rhv

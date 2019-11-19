@@ -1,7 +1,7 @@
 from utilities import *
 
 
-def c4_1(n):
+def c4_1(n, verbosity=0):
     m = 2 * n
     N = n + 2 * m
     G = np.eye(n)
@@ -18,9 +18,10 @@ def c4_1(n):
     rhv = create_rhv_c4_1(z, G, C, g, d, n, m, N)
     iloop = 0
     while loop and iloop < niter:
-        loop, z, small_KKT, rhv = algorithm_c4_1(z, small_KKT, rhv, G, C, g, d, n, m, N)
+        loop, z, small_KKT, rhv = algorithm_c4_1(z, small_KKT, rhv, G, C, g, d, n, m, N, verbosity)
         iloop = iloop + 1
-    print('n:{} iters:{} z+g:{}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
+    if verbosity>0:
+        print('n:{} iters:{} z+g:{}'.format(n, iloop, np.linalg.norm(z[:n] + g)))
     return
 
 
