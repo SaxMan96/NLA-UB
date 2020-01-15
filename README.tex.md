@@ -16,7 +16,6 @@
  
 	
   $$
-  
   \left(\begin{array}{lll}
   {a} & {b} & {c} \\
   {0} & {d} & {e} \\
@@ -33,19 +32,18 @@
   {0} & {1} & {0} \\
   {0} & {0} & {1}
   \end{array}\right)
-  
   $$
-
+  
     giving
 
   $$
-    \left(\begin{array}{lll}
+  \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
     \end{array}\right)
   $$
-
+  
     from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
 
 - **Positive Definite matrix** - $A$ $n \times n$ symmetric real matrix $M$ is said to be positive definite if $x^{\top} M x>0$ for all non-zero $x$ in $\mathbb{R}^{n}$.
@@ -129,18 +127,18 @@
 
 - **Condition number**
 
-- 
-
 - **Norms**
-
-    $$
+- 
+  $$
+  
     \begin{aligned}
     &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
     &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
     \end{aligned}
-    $$
-
-    $$
+    
+  $$
+    
+  $$
     \begin{array}{lll}
     {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
     {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
@@ -149,8 +147,8 @@
     {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
     \end{array}
-    $$
-
+  $$
+    
 - Rank1/2 approximation
 
 # Matrix Factorization:
