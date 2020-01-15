@@ -1,7 +1,7 @@
 # Problems
 
 - Linear System <img src="/tex/70681e99f542745bf6a0c56bd4600b39.svg?invert_in_darkmode&sanitize=true" align=middle width=50.69621369999999pt height=22.831056599999986pt/>
-- Least Squares Problem <img src="/tex/749be25fd3c3b78a85419a89da2f8363.svg?invert_in_darkmode&sanitize=true" align=middle width=67.13467035pt height=24.65753399999998pt/>~2~
+- Least Squares Problem <img src="/tex/58230adccafdd16765dfcfdcd5a78f0f.svg?invert_in_darkmode&sanitize=true" align=middle width=73.68721634999999pt height=24.65753399999998pt/>
 - Eigenvalue problem <img src="/tex/56209a06e3f8ff47137648f6adc4e9b9.svg?invert_in_darkmode&sanitize=true" align=middle width=53.036405399999985pt height=22.465723500000017pt/>    <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> - vector <img src="/tex/096be10cb54679b9e121da37db429b64.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/> - scalar
 - Singular Value problem <img src="/tex/ff2985a81626929740d239c8aa6bc2cc.svg?invert_in_darkmode&sanitize=true" align=middle width=75.72079679999999pt height=27.6567522pt/>
 
@@ -13,7 +13,7 @@
 
     It is not too difficult to solve directly
 
-    $
+    $$
     \left(\begin{array}{lll}
     {a} & {b} & {c} \\
     {0} & {d} & {e} \\
@@ -26,15 +26,18 @@
     {1} & {0} & {0} \\
     {0} & {1} & {0} \\
     {0} & {0} & {1}
-    \end{array}\right)$
+    \end{array}\right)
+    $$
 
     giving
 
-    $\left(\begin{array}{ccc}
+    $$
+    \left(\begin{array}{ccc}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
-    \end{array}\right)$
+    \end{array}\right)
+    $$
 
     from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
 
@@ -80,19 +83,23 @@
 
 - **Norms**
 
-    $$\begin{aligned}
+    $$
+    \begin{aligned}
     &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
     &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
-    \end{aligned}$$
+    \end{aligned}
+    $$
 
-    $$\begin{array}{lll}
+    $$
+    \begin{array}{lll}
     {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
     {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
     {L^{2}-\text { norm }} & {|\mathbf{x}|_{2}} & {\sqrt{14}} & {3.742} \\
     {L^{3}-\text { norm }} & {|\mathbf{x}|_{3}} & {6^{2 / 3}} & {3.302} \\
     {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
-    \end{array}$$
+    \end{array}
+    $$
 
 - Rank1/2 approximation
 
@@ -105,7 +112,9 @@ A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.sv
 - Forward Substitution
 
   for <img src="/tex/081b3265e50f611c00daeffa91931873.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/> to <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>
-   	$x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}$	
+   	$$
+   	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
+   	$$	
   end for
 
 - Backward Substitution
@@ -125,7 +134,7 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 
 ​		<img src="/tex/3e72395e5dc12efddc7732b813ff0cab.svg?invert_in_darkmode&sanitize=true" align=middle width=160.04795894999998pt height=67.39784699999998pt/> 			  			<img src="/tex/4f28d963545e93ec03df74bcf1e72a7b.svg?invert_in_darkmode&sanitize=true" align=middle width=167.35171034999996pt height=67.39784699999998pt/>
 
-​		<img src="/tex/b7800468c321276fd038c1496efa3cca.svg?invert_in_darkmode&sanitize=true" align=middle width=58.449632999999984pt height=22.465723500000017pt/>
+		<img src="/tex/b7800468c321276fd038c1496efa3cca.svg?invert_in_darkmode&sanitize=true" align=middle width=58.449632999999984pt height=22.465723500000017pt/>
 
 ## Gaussian Elimination
 
@@ -147,40 +156,48 @@ Important thing <img src="/tex/4c81e1f11c1e21db89203acade86ffb6.svg?invert_in_da
 
 ## Cholesky Factorization
 
-The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. <img src="/tex/71a38687d31c242a33a3ec23e25e3ba0.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/> needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. <img src="/tex/95a6c12ed4f3720ff49aeb54580956e7.svg?invert_in_darkmode&sanitize=true" align=middle width=66.15463304999999pt height=27.6567522pt/>, where <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> is a lower triangular matrix with real and positive diagonal entries.
+The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. <img src="/tex/71a38687d31c242a33a3ec23e25e3ba0.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/> needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. <img src="/tex/95a6c12ed4f3720ff49aeb54580956e7.svg?invert_in_darkmode&sanitize=true" align=middle width=66.15463304999999pt height=27.6567522pt/>, where <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> is a lower triangular matrix with real and positive diagonal entries.
 
-<img src="/tex/54baa16af8ddfb9ed1fc264445075833.svg?invert_in_darkmode&sanitize=true" align=middle width=148.53929144999998pt height=22.831056599999986pt/>
-<p align="center"><img src="/tex/06a107eeb107c16e1402e3e94b5bc2ae.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
+Cholesky Algorithm:
+
+    $$
+    \begin{aligned}
+    l_{1,1} &=\sqrt{a_{11}} \\
+    l_{j, 1} &=\frac{a_{j 1}}{l_{11}}, \quad j \in[2, n] \\
+    l_{i, i} &=\sqrt{a_{i i}-\sum_{p=1}^{i-1} l_{i p}^{2}}, \quad i \in[2, n] \\
+    l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
+    \end{aligned}
+    $$
 **Example**
 
-<img src="/tex/13ba400136e17f54abfeea1cab2a7103.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087604999997pt height=67.39784699999998pt/> 
+	<p align="center"><img src="/tex/db06fc8dce12ad92fcf7e4cbb7264c31.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p> 
 
 - <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
 
-    $
+    $$
     \begin{aligned}
     & l_{1,1} = \sqrt{a_{1,1}} = 2 \\
     & l_{2,1} = \frac{a_{2,1}}{l_{1,1}} = 6 \\
     & l_{3,1} = \frac{a_{3,1}}{l_{1,1}} = -8
     \end{aligned} \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { ? } & { 0 } \\ { - 8 } & { ? } & { ? } \end{array} \right]
-    $
+    $$
 
 - <img src="/tex/0913491f80945049ed061e8767a50fe3.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
 
-    $
+    $$
     \begin{aligned}
     & { l _ { 2,2 } = \sqrt { a _ { 2,2 } -  l _ { 2,1 } ^ { 2 }} }  = \sqrt{37 - 6^{2}} = 1\\ 
     & { l_ { 3,2 } = \left( a _ { 3,2 } - l _ { 2 , 1 } \cdot l _ { 3,1 } \right) / l _ { 2,2 } } = (- 43 - (6 \cdot (- 8))/1 = 5 \end{aligned}
      \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { ? } \end{array} \right] 
-    $
+    $$
 
 - <img src="/tex/b8fe7a8f30cfdea91cd4bb99033d6e21.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/>
 
-  <img src="/tex/59ec1fd25a31afd6c49a4792671e808c.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999996pt height=122.6911356pt/>
+  <p align="center"><img src="/tex/f9c8ab8ce67745dfaf7474d9502b77b7.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
 
   
 
-<img src="/tex/3c826e1f2874202ae2152e45e13e7412.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=67.39784699999998pt/>
+	<p align="center"><img src="/tex/abdaf0f8e0383fa69b4f6c03ed31d7b4.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
 
 ## QR Factorization
 
@@ -192,11 +209,11 @@ Any real square matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?inver
 
 where <img src="/tex/1afcdb0f704394b16fe85fb40c45ca7a.svg?invert_in_darkmode&sanitize=true" align=middle width=12.99542474999999pt height=22.465723500000017pt/> is an orthogonal matrix and <img src="/tex/1e438235ef9ec72fc51ac5025516017c.svg?invert_in_darkmode&sanitize=true" align=middle width=12.60847334999999pt height=22.465723500000017pt/> is an upper triangular matrix.
 
-​		<img src="/tex/289fa8a47dca704705ed5ab428875f69.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=96.98719139999999pt/>
+		<p align="center"><img src="/tex/df33ce485369907b3c94152ba058af88.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=88.76800184999999pt/></p>
 
 vectors <img src="/tex/ea4eed098b4de19e35fb622e5df2383a.svg?invert_in_darkmode&sanitize=true" align=middle width=66.70652339999998pt height=14.15524440000002pt/> are orthonormal <img src="/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/> -vectors:
 
-​		<img src="/tex/5ed122aa1441816a357f43241ca78e5f.svg?invert_in_darkmode&sanitize=true" align=middle width=145.81583279999998pt height=27.6567522pt/> if <img src="/tex/c88ac81ff84a4f4626abb3c19b91e9a8.svg?invert_in_darkmode&sanitize=true" align=middle width=35.29127414999999pt height=22.831056599999986pt/>
+		<p align="center"><img src="/tex/a4fc9e36fcfeabdf6e9a8f8059afd784.svg?invert_in_darkmode&sanitize=true" align=middle width=414.82575914999995pt height=47.43568499999999pt/></p>
 
 
 
@@ -219,7 +236,7 @@ vectors <img src="/tex/ea4eed098b4de19e35fb622e5df2383a.svg?invert_in_darkmode&s
 
 **Gram-Schmidt algorithm**
 Given: <img src="/tex/205995f88b807b2f5268f7ef4053f049.svg?invert_in_darkmode&sanitize=true" align=middle width=44.39116769999999pt height=19.1781018pt/> matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> with linearly independent columns <img src="/tex/92abd3df4e519ffaaf3007814390ba78.svg?invert_in_darkmode&sanitize=true" align=middle width=69.40820699999999pt height=14.15524440000002pt/>
-<img src="/tex/ad24d8cc13c65f48d4ae25f0910f365e.svg?invert_in_darkmode&sanitize=true" align=middle width=364.0773642pt height=527.0330736pt/>
+	<p align="center"><img src="/tex/8e10c2a95039af21879bf170333d91a8.svg?invert_in_darkmode&sanitize=true" align=middle width=600.46252695pt height=239.31701969999997pt/></p>
 
 In MATLAB:
 
