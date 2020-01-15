@@ -12,8 +12,6 @@
 - **Inversing Triangular Matrix**
 
     Solve directly:
-    
- 
 	
   $$
   \left(\begin{array}{lll}
@@ -44,7 +42,7 @@
     \end{array}\right)
   $$
   
-    from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
+    from which we see directly that the matrix is invertible if all $a,d$ and $f$ are different from zero
 
 - **Positive Definite matrix** - $A$ $n \times n$ symmetric real matrix $M$ is said to be positive definite if $x^{\top} M x>0$ for all non-zero $x$ in $\mathbb{R}^{n}$.
 
@@ -121,23 +119,21 @@
 
   $$
   (A-\lambda I) X=0
-  $$​
+  $$
 
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-- 
+
   $$
-  
     \begin{aligned}
     &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
     &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
     \end{aligned}
-    
   $$
-    
+  
   $$
     \begin{array}{lll}
     {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
@@ -148,14 +144,16 @@
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
     \end{array}
   $$
-    
+  
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix $A$ is a representation of $A$ as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 
-$\left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]$
+$$
+  \left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]
+$$
 
 - Forward Substitution
 
@@ -167,26 +165,31 @@ $\left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & 
 
 - Backward Substitution
 
-  An analogous idea*, back substitution*, works if $A$ is upper triangular. 
+  An analogous idea, back substitution, works if $A$ is upper triangular. 
 To use this to solve a general system $A x=b$ we need the following matrix factorization, which is just a restatement of Gaussian elimination.
 
 ## LU Factorization
 
-​		$A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
+$$
+  A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { ? } & { 1 } & { 0 } \\ { ? } & { ? } & { 1 } \end{array} \right]
-$
+$$
 
 **2** and **-3** goes down to $L$ with changed sign
 
-​		$U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { -8 } & { 16 } \end{array} \right] \begin{matrix}\\ \\\textbf{0.5}R_{2}+R_{3}\end{matrix} 
-\quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { ? } & { 1 } \end{array} \right]$
+$$
+  U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { -8 } & { 16 } \end{array} \right] \begin{matrix}\\ \\\textbf{0.5}R_{2}+R_{3}\end{matrix} 
+\quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { ? } & { 1 } \end{array} \right]
+$$
 
-**0.5** goes to $L$ with minus sign.
+  **0.5** goes to $L$ with minus sign.
 
-​		$U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { 0 } & { 15.5 } \end{array} \right] 
-$ 			  			$L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]$
+$$
+  U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { 0 } & { 15.5 } \end{array} \right] 
+$ 			  			$L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]
+$$
 
-		$A = LU$
+  $A = LU$
 
 ## Gaussian Elimination
 
