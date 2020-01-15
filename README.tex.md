@@ -16,32 +16,32 @@ $$
 - **Inversing Triangular Matrix**
 
     Solve directly:
-  $$
-  \left(\begin{array}{lll}
-  {a} & {b} & {c} \\
-  {0} & {d} & {e} \\
-  {0} & {0} & {f}
-  \end{array}\right)
-  \left(\begin{array}{lll}
-  {x} & {y} & {z} \\
-  {0} & {y} & {v} \\
-  {0} & {0} & {w}
-  \end{array}\right)
-  =
-  \left(\begin{array}{lll}
-  {1} & {0} & {0} \\
-  {0} & {1} & {0} \\
-  {0} & {0} & {1}
-  \end{array}\right)
-  $$
+    $$
+    \left(\begin{array}{lll}
+    {a} & {b} & {c} \\
+    {0} & {d} & {e} \\
+    {0} & {0} & {f}
+    \end{array}\right)
+    \left(\begin{array}{lll}
+    {x} & {y} & {z} \\
+    {0} & {y} & {v} \\
+    {0} & {0} & {w}
+    \end{array}\right)
+    =
+    \left(\begin{array}{lll}
+    {1} & {0} & {0} \\
+    {0} & {1} & {0} \\
+    {0} & {0} & {1}
+    \end{array}\right)
+    $$
     giving
-  $$
-  \left(\begin{array}{lll}
+    $$
+    \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
     \end{array}\right)
-  $$
+    $$
   from which we see directly that the matrix is invertible if all $a,d$ and $f$ are different from zero
 
 - **Positive Definite matrix** - $A$ $n \times n$ symmetric real matrix $M$ is said to be positive definite if $x^{\top} M x>0$ for all non-zero $x$ in $\mathbb{R}^{n}$.
@@ -54,9 +54,9 @@ $$
 
 - **Rank of a matrix** - The rank of a matrix is defined as 
 
-  - (a) the maximum number of linearly independent column vectors in the matrix or 
+  - the maximum number of linearly independent column vectors in the matrix or 
 
-  - (b) the maximum number of linearly independent row vectors in the matrix. 
+  - the maximum number of linearly independent row vectors in the matrix. 
 
     Both definitions are equivalent.
 
@@ -118,6 +118,7 @@ which is equivalent to the homogeneous system
   Equation ( 4) can be written compactly as
   $$
   (A-\lambda I) X=0$$
+  
 - **Singular Value**
 
 - **Condition number**
@@ -140,6 +141,7 @@ which is equivalent to the homogeneous system
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
     \end{array}
   $$
+  
 - Rank1/2 approximation
 
 # Matrix Factorization:
