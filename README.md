@@ -44,33 +44,34 @@
   for some scalar <img src="/tex/722d262217f99de10f2a57fe9cb64338.svg?invert_in_darkmode&sanitize=true" align=middle width=14.155307099999991pt height=22.831056599999986pt/> then <img src="/tex/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg?invert_in_darkmode&sanitize=true" align=middle width=9.58908224999999pt height=22.831056599999986pt/> is called the eigenvalue of A with corresponding (right) eigenvector <img src="/tex/d05b996d2c08252f77613c25205a0f04.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/>.
 
   Letting A be a <img src="/tex/1bd1a25ad3542becf0e5739e9fb42d2f.svg?invert_in_darkmode&sanitize=true" align=middle width=38.24192129999999pt height=22.831056599999986pt/> square matrix
-<p align="center"><img src="/tex/0627ec392f65da24cbbe8305f4862745.svg?invert_in_darkmode&sanitize=true" align=middle width=177.55163249999998pt height=88.76800184999999pt/></p>
+  <p align="center"><img src="/tex/b5a0b03d2dc92d81704b5a59ce7ead0f.svg?invert_in_darkmode&sanitize=true" align=middle width=177.55163249999998pt height=88.76800184999999pt/></p>
   with eigenvalue <img src="/tex/722d262217f99de10f2a57fe9cb64338.svg?invert_in_darkmode&sanitize=true" align=middle width=14.155307099999991pt height=22.831056599999986pt/> then the corresponding eigenvectors satisfy
-<p align="center"><img src="/tex/578ce8a3337f0ef1caf42093bc15db92.svg?invert_in_darkmode&sanitize=true" align=middle width=326.2159461pt height=88.76800184999999pt/></p>
-  which is equivalent to the homogeneous system
-<p align="center"><img src="/tex/c00018270a4328087da6ece3246933bd.svg?invert_in_darkmode&sanitize=true" align=middle width=392.23733174999995pt height=88.76800184999999pt/></p>
+  <p align="center"><img src="/tex/25724d24c06e752352d243020ba84e20.svg?invert_in_darkmode&sanitize=true" align=middle width=326.2159461pt height=88.76800184999999pt/></p>
+which is equivalent to the homogeneous system
+  <p align="center"><img src="/tex/a756317b45412de29bc75eaef79d36fe.svg?invert_in_darkmode&sanitize=true" align=middle width=392.23733174999995pt height=88.76800184999999pt/></p>
   Equation ( 4) can be written compactly as
-<p align="center"><img src="/tex/10f2f62b956ac95bbc1227ea372c38df.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
+  <p align="center"><img src="/tex/b839829210d7ca234a971a5eabd49b05.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-<p align="center"><img src="/tex/557db238052fd75ced64758ef5cc57a4.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
+  <p align="center"><img src="/tex/db2a2580836f57ddd04e9e5c401f93ab.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
 
-<p align="center"><img src="/tex/b6f34728314d772fd33b1cda6e9e46d3.svg?invert_in_darkmode&sanitize=true" align=middle width=290.13740084999995pt height=211.67313915pt/></p>
-
+  <p align="center"><img src="/tex/35f4df1d8ea027c65275274ea85fdecf.svg?invert_in_darkmode&sanitize=true" align=middle width=309.42971895pt height=117.1525905pt/></p>
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is a representation of <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
-<p align="center"><img src="/tex/60f23d3df30321fc804c70a2c16ee962.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
+<p align="center"><img src="/tex/5309fbf7b6112c3fb2fab4793820496a.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
 - Forward Substitution
 
   for <img src="/tex/081b3265e50f611c00daeffa91931873.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/> to <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>
-<p align="center"><img src="/tex/ffcc1ea49f89deebb9b0bda33a3bf8c3.svg?invert_in_darkmode&sanitize=true" align=middle width=189.94192139999998pt height=49.315569599999996pt/></p>
-  end for
+  <p align="center"><img src="/tex/1eabfd12ac210a4d1a5e393fb27ad2f9.svg?invert_in_darkmode&sanitize=true" align=middle width=189.94192139999998pt height=49.315569599999996pt/></p>
+  
+
+end for
 
 - Backward Substitution
 
