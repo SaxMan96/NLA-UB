@@ -11,21 +11,15 @@
 
 - **Inversing Triangular Matrix**
 
-    It is not too difficult to solve directly
+    Solve directly:
     
  
 	
-  <p align="center"><img src="/tex/fc0d1cf012c5b9438ecaa690e04a8d16.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/2b57f573b640836333449e4848339817.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
 
     giving
 
-    $$
-    \left(\begin{array}{lll}
-    {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
-    {0} & {1 / d} & {-e /(f d)} \\
-    {0} & {0} & {1 / f}
-    \end{array}\right)
-    $$
+  <p align="center"><img src="/tex/0378d2b5bdbe669e569a49ca2cf086af.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
 
     from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
 
