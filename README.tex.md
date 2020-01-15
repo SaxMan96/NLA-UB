@@ -1,13 +1,9 @@
 # Problems
-$$
-\quad
-$$
 
 - Linear System: $Ax = b$
 - Least Squares Problem $||Ax - b||_{2}$
 - Eigenvalue problem $Ax = \lambda x$, where $x$ - vector $\lambda$ - scalar
 - Singular Value problem $A^T Ax = \lambda x$
-
 
 # Definitions
 
@@ -64,7 +60,9 @@ $$
 
   Let $A$ be a linear transformation represented by a matrix A. If there is a vector $\mathbf{X} \in \mathbb{R}^{n} \neq 0$ such that:
 
-  $A X=\lambda X$
+  $$
+  A X=\lambda X
+  $$
 
   for some scalar $\lambda,$ then $\lambda$ is called the eigenvalue of A with corresponding (right) eigenvector $\mathbf{X}$.
 
@@ -96,7 +94,7 @@ $$
   {x_{k}}
   \end{array}\right]
   $$
-which is equivalent to the homogeneous system
+  which is equivalent to the homogeneous system
   $$
   \left[\begin{array}{cccc}
   {a_{11}-\lambda} & {a_{12}} & {\cdots} & {a_{1 k}} \\
@@ -117,7 +115,8 @@ which is equivalent to the homogeneous system
   $$
   Equation ( 4) can be written compactly as
   $$
-  (A-\lambda I) X=0$$
+  (A-\lambda I) X=0
+  $$
   
 - **Singular Value**
 
@@ -125,21 +124,21 @@ which is equivalent to the homogeneous system
 
 - **Norms**
   $$
-    \begin{aligned}
-    &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
-    &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
-    \end{aligned}
+  \begin{aligned}
+  &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
+  &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
+  \end{aligned}
   $$
 
   $$
-\begin{array}{llll}
-    {\text { name }} & {\text { symbol}} & {\text {  value }} & {\text { approx. }} \\
-    {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
-    {L^{2}-\text { norm }} & {|\mathbf{x}|_{2}} & {\sqrt{14}} & {3.742} \\
-    {L^{3}-\text { norm }} & {|\mathbf{x}|_{3}} & {6^{2 / 3}} & {3.302} \\
-    {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
-    {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
-    \end{array}
+  \begin{array}{llll}
+  {\text { name }} & {\text { symbol}} & {\text {  value }} & {\text {    approx. }} \\
+  {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
+  {L^{2}-\text { norm }} & {|\mathbf{x}|_{2}} & {\sqrt{14}} & {3.742} \\
+  {L^{3}-\text { norm }} & {|\mathbf{x}|_{3}} & {6^{2 / 3}} & {3.302} \\
+  {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} &{3.146} \\
+  {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
+  \end{array}
   $$
   
 - Rank1/2 approximation
@@ -147,8 +146,26 @@ which is equivalent to the homogeneous system
 # Matrix Factorization:
 
 A factorization of the matrix $A$ is a representation of $A$ as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
+
 $$
-\left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]
+  \left[\begin{array}{cccc}
+  {a_{11}} & {} & {} & {} \\ 
+  {a_{21}} &  {a_{22}} & {} & {} \\ 
+  {\vdots} & {\vdots} & {\ddots} & {} \\ 
+  {a_{n 1}} &   {a_{n 2}} &  {\ldots} & {a_{n n}}
+  \end{array}\right]
+  \left[\begin{array}{c}
+  {x_{1}} \\ 
+  {x_{2}} \\ 
+  {\vdots} \\
+  {x_{n}}
+  \end{array}\right]
+  =\left[\begin{array}{c}
+  {b_{1}} \\ 
+  {b_{2}} \\   
+  {\vdots} \\ 
+  {b_{n}}
+  \end{array}\right]
 $$
 - Forward Substitution
 
@@ -156,9 +173,7 @@ $$
   $$
    	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
   $$
-  
-
-end for
+  end for
 
 - Backward Substitution
 
@@ -166,8 +181,9 @@ end for
 To use this to solve a general system $A x=b$ we need the following matrix factorization, which is just a restatement of Gaussian elimination.
 
 ## LU Factorization
+
 $$
-  A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
+A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { ? } & { 1 } & { 0 } \\ { ? } & { ? } & { 1 } \end{array} \right]
 $$
 **2** and **-3** goes down to $L$ with changed sign
