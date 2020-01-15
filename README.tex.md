@@ -12,17 +12,22 @@
 - **Inversing Triangular Matrix**
 
     It is not too difficult to solve directly
-
+    
+ 
+	
     $$
     \left(\begin{array}{lll}
     {a} & {b} & {c} \\
     {0} & {d} & {e} \\
     {0} & {0} & {f}
-    \end{array}\right)\left(\begin{array}{lll}
+    \end{array}\right)
+    \left(\begin{array}{lll}
     {x} & {y} & {z} \\
     {0} & {y} & {v} \\
     {0} & {0} & {w}
-    \end{array}\right)=\left(\begin{array}{lll}
+    \end{array}\right)
+    =
+    \left(\begin{array}{lll}
     {1} & {0} & {0} \\
     {0} & {1} & {0} \\
     {0} & {0} & {1}
@@ -32,7 +37,7 @@
     giving
 
     $$
-    \left(\begin{array}{ccc}
+    \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
@@ -155,9 +160,9 @@ $\left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & 
 - Forward Substitution
 
   for $i=1$ to $n$
-   	$$
+  $$
    	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
-   	$$	
+  $$
   end for
 
 - Backward Substitution
@@ -218,8 +223,8 @@ Cholesky Algorithm:
 **Example**
 
 	$$A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
-    {12} & {37} & {-43} \\
-    {-16} & {-43} & {98}
+	{12} & {37} & {-43} \\
+	{-16} & {-43} & {98}
 	\end{array}\right]
 	$$ 
 
