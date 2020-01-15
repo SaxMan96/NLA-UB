@@ -1,9 +1,13 @@
 # Problems
+$$
+\quad
+$$
 
-- Linear System $Ax = b$
+- Linear System: $Ax = b$
 - Least Squares Problem $||Ax - b||_{2}$
-- Eigenvalue problem $Ax = λx$    $x$ - vector $λ$ - scalar
-- Singular Value problem $A^T Ax = λx$
+- Eigenvalue problem $Ax = \lambda x$, where $x$ - vector $\lambda$ - scalar
+- Singular Value problem $A^T Ax = \lambda x$
+
 
 # Definitions
 
@@ -12,7 +16,6 @@
 - **Inversing Triangular Matrix**
 
     Solve directly:
-	
   $$
   \left(\begin{array}{lll}
   {a} & {b} & {c} \\
@@ -31,9 +34,7 @@
   {0} & {0} & {1}
   \end{array}\right)
   $$
-  
     giving
-
   $$
   \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
@@ -41,8 +42,7 @@
     {0} & {0} & {1 / f}
     \end{array}\right)
   $$
-  
-    from which we see directly that the matrix is invertible if all $a,d$ and $f$ are different from zero
+  from which we see directly that the matrix is invertible if all $a,d$ and $f$ are different from zero
 
 - **Positive Definite matrix** - $A$ $n \times n$ symmetric real matrix $M$ is said to be positive definite if $x^{\top} M x>0$ for all non-zero $x$ in $\mathbb{R}^{n}$.
 
@@ -69,16 +69,16 @@
   for some scalar $\lambda,$ then $\lambda$ is called the eigenvalue of A with corresponding (right) eigenvector $\mathbf{X}$.
 
   Letting A be a $k \times k$ square matrix
-  $$
+$$
   \left[\begin{array}{cccc}
   {a_{11}} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}} & {\cdots} & {a_{2 k}} \\
   {\vdots} & {\vdots} & {\ddots} & {\vdots} \\
   {a_{k 1}} & {a_{k 2}} & {\cdots} & {a_{k k}}
   \end{array}\right]
-  $$
+$$
   with eigenvalue $\lambda,$ then the corresponding eigenvectors satisfy
-  $$
+$$
   \left[\begin{array}{cccc}
   {a_{11}} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}} & {\cdots} & {a_{2 k}} \\
@@ -95,9 +95,9 @@
   {\vdots} \\
   {x_{k}}
   \end{array}\right]
-  $$
+$$
   which is equivalent to the homogeneous system
-  $$
+$$
   \left[\begin{array}{cccc}
   {a_{11}-\lambda} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}-\lambda} & {\cdots} & {a_{2 k}} \\
@@ -114,27 +114,24 @@
   {\vdots} \\
   {0}
   \end{array}\right]
-  $$
+$$
   Equation ( 4) can be written compactly as
-
-  $$
+$$
   (A-\lambda I) X=0
-  $$
-
+$$
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-
-  $$
+$$
     \begin{aligned}
     &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
     &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
     \end{aligned}
-  $$
-  
-  $$
+$$
+
+$$
     \begin{array}{lll}
     {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
     {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
@@ -143,24 +140,22 @@
     {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
     \end{array}
-  $$
-  
+$$
+
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix $A$ is a representation of $A$ as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
-
 $$
   \left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]
 $$
-
 - Forward Substitution
 
   for $i=1$ to $n$
-  $$
+$$
    	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
-  $$
+$$
   end for
 
 - Backward Substitution
@@ -169,20 +164,16 @@ $$
 To use this to solve a general system $A x=b$ we need the following matrix factorization, which is just a restatement of Gaussian elimination.
 
 ## LU Factorization
-
 $$
   A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { ? } & { 1 } & { 0 } \\ { ? } & { ? } & { 1 } \end{array} \right]
 $$
-
 **2** and **-3** goes down to $L$ with changed sign
 $$
   U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { -8 } & { 16 } \end{array} \right] \begin{matrix}\\ \\\textbf{0.5}R_{2}+R_{3}\end{matrix} 
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { ? } & { 1 } \end{array} \right]
 $$
-
   **0.5** goes to $L$ with minus sign.
-
 $$
 U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { 0 } & { 15.5 } \end{array} \right] 
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]
@@ -191,7 +182,6 @@ $$
 $$
     A = LU
 $$
-
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose $a_{i,k}$ and swap that  $k$-th row with $i$-th row `for i in (1,n) `.
@@ -215,7 +205,6 @@ Important thing $L^{-1} \neq L^{T}$ and  $U^{-1} \neq U^{T}$ - check **inversion
 The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. $\bf{A}$ needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. $A = LL^{T}$, where $L$ is a lower triangular matrix with real and positive diagonal entries.
 
 Cholesky Algorithm:
-
 $$
     \begin{aligned}
     l_{1,1} &=\sqrt{a_{11}} \\
@@ -224,73 +213,54 @@ $$
     l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
     \end{aligned}
 $$
-
 **Example**
-
 $$
   A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
   {12} & {37} & {-43} \\
   {-16} & {-43} & {98}
   \end{array}\right]
 $$
-
 - $i = 1:$
-
-  $$
+$$
   \begin{aligned}
     & l_{1,1} = \sqrt{a_{1,1}} = 2 \\
     & l_{2,1} = \frac{a_{2,1}}{l_{1,1}} = 6 \\
     & l_{3,1} = \frac{a_{3,1}}{l_{1,1}} = -8
     \end{aligned} \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { ? } & { 0 } \\ { - 8 } & { ? } & { ? } \end{array} \right]
-  $$
-
+$$
 - $i = 2:$
-
-  $$
+$$
   \begin{aligned}
     & { l _ { 2,2 } = \sqrt { a _ { 2,2 } -  l _ { 2,1 } ^ { 2 }} }  = \sqrt{37 - 6^{2}} = 1\\ 
     & { l_ { 3,2 } = \left( a _ { 3,2 } - l _ { 2 , 1 } \cdot l _ { 3,1 } \right) / l _ { 2,2 } } = (- 43 - (6 \cdot (- 8))/1 = 5 \end{aligned}
      \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { ? } \end{array} \right] 
-  $$
-
+$$
 - $i = 3$
-
-  $$
+$$
   \begin{aligned} 
   l _ { 3,3 } & = \sqrt { a _ { 3,3 } - \left( l _ { 3,1 } ^ { 2 } + l _ { 3,2 } ^ { 2 } \right) } = \\ & = \sqrt { 98 - \left( ( - 8 ) ^ { 2 } + 5 ^ { 2 } \right) } = \\ & = \sqrt { 98 - ( 64 + 25 ) } = \\ & = \sqrt { 98 - 89 } = \sqrt { 9 } = 3 \end{aligned}
-  $$
+$$
 
-  
-
-  $$
+$$
   L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { 3 } \end{array} \right]
 \quad L^{T} = \left[ \begin{array} { r r r } { 2 } & { 6 } & { -8 } \\ { 0 } & { 1 } & { 5 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] 
-  $$
-
+$$
 ## QR Factorization
 
 Any real square matrix $A$ may be decomposed as
-
 $$
   A=Q R
 $$
-
 **Definition** with $Q$ as a vector:
 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix.
-
 $$
   A=\left[\begin{array}{llll}{q_{1}} & {q_{2}} & {\cdots} & {q_{n}}\end{array}\right]\left[\begin{array}{cccc}{R_{11}} & {R_{12}} & {\cdots} & {R_{1 n}} \\ {0} & {R_{22}} & {\cdots} & {R_{2 n}} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {0} & {0} & {\cdots} & {R_{n n}}\end{array}\right]
 $$
-
 vectors $q_{1}, \ldots, q_{n}$ are orthonormal $m$ -vectors:
-
 $$
   \left\|q_{i}\right\|=1, \quad q_{i}^{T} q_{j}=0 \quad \text{if} i \neq j
 $$
-
-
-
 **QR factorization solves:**
 
 - linear equations
