@@ -11,11 +11,12 @@
 
 - **Inversing Triangular Matrix**
 
-    It is not too difficult to solve directly
+    Solve directly:
     
  
 	
   $$
+  
   \left(\begin{array}{lll}
   {a} & {b} & {c} \\
   {0} & {d} & {e} \\
@@ -32,17 +33,18 @@
   {0} & {1} & {0} \\
   {0} & {0} & {1}
   \end{array}\right)
+  
   $$
 
     giving
 
-    $$
+  $$
     \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
     \end{array}\right)
-    $$
+  $$
 
     from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
 
