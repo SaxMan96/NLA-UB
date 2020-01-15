@@ -188,9 +188,9 @@ U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { 
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]
 $$
 
-  $$
+$$
     A = LU
-  $$
+$$
 
 ## Gaussian Elimination
 
@@ -216,23 +216,23 @@ The Cholesky decomposition is roughly twice as efficient as the LU decomposition
 
 Cholesky Algorithm:
 
-  $$
+$$
     \begin{aligned}
     l_{1,1} &=\sqrt{a_{11}} \\
     l_{j, 1} &=\frac{a_{j 1}}{l_{11}}, \quad j \in[2, n] \\
     l_{i, i} &=\sqrt{a_{i i}-\sum_{p=1}^{i-1} l_{i p}^{2}}, \quad i \in[2, n] \\
     l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
     \end{aligned}
-  $$
-  
+$$
+
 **Example**
 
-  $$
+$$
   A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
   {12} & {37} & {-43} \\
   {-16} & {-43} & {98}
   \end{array}\right]
-  $$ 
+$$
 
 - $i = 1:$
 
@@ -271,23 +271,23 @@ Cholesky Algorithm:
 
 Any real square matrix $A$ may be decomposed as
 
-  $$
+$$
   A=Q R
-  $$
+$$
 
 **Definition** with $Q$ as a vector:
 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix.
 
-  $$
+$$
   A=\left[\begin{array}{llll}{q_{1}} & {q_{2}} & {\cdots} & {q_{n}}\end{array}\right]\left[\begin{array}{cccc}{R_{11}} & {R_{12}} & {\cdots} & {R_{1 n}} \\ {0} & {R_{22}} & {\cdots} & {R_{2 n}} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {0} & {0} & {\cdots} & {R_{n n}}\end{array}\right]
-  $$
+$$
 
 vectors $q_{1}, \ldots, q_{n}$ are orthonormal $m$ -vectors:
 
-  $$
-  \left\|q_{i}\right\|=1, \quad q_{i}^{T} q_{j}=0 \quad$ if $i \neq j
-  $$
+$$
+  \left\|q_{i}\right\|=1, \quad q_{i}^{T} q_{j}=0 \quad \text{if} i \neq j
+$$
 
 
 
@@ -310,20 +310,20 @@ vectors $q_{1}, \ldots, q_{n}$ are orthonormal $m$ -vectors:
 
 **Gram-Schmidt algorithm**
 Given: $m \times n$ matrix $A$ with linearly independent columns $a_{1}, \ldots, a_{n}$
-  $$
+$$
   \text{Algorithm} \\
-    \quad \text{for } k=1 \text{ to } n:\\
-    \qquad \begin{aligned}
-    \tilde{q}_{1} &= a_{1} \\
-    R_{1 k} &=\left\|\tilde{q}_{1}\right\|  \\ 
-    q_{1} &=\frac{1}{R_{1 k}}\tilde{q}_{1} \\
-    & \vdots \\ 
-    R_{k-1, k} &=q_{k-1}^{T} a_{k} \\ 
-    \tilde{q}_{k} &=a_{k}-\left(R_{1 k} q_{1}+R_{2 k} q_{2}+\cdots+R_{k-1, k} q_{k-1}\right) \\ 
-    R_{k k} &=\left\|\tilde{q}_{k}\right\| \\ 
-    q_{k} &=\frac{1}{R_{k k}} \tilde{q}_{k} 
-    \end{aligned}
-  $$
+  \quad \text{for } k=1 \text{ to } n:
+  \quad \begin{aligned}
+  \tilde{q}_{1} &= a_{1} \\
+  R_{1 k} &=\left\|\tilde{q}_{1}\right\|  \\ 
+  q_{1} &=\frac{1}{R_{1 k}}\tilde{q}_{1} \\
+  & \vdots \\ 
+  R_{k-1, k} &=q_{k-1}^{T} a_{k} \\ 
+  \tilde{q}_{k} &=a_{k}-\left(R_{1 k} q_{1}+R_{2 k} q_{2}+\cdots+R_{k-1, k} q_{k-1}\right) \\ 
+  R_{k k} &=\left\|\tilde{q}_{k}\right\| \\ 
+  q_{k} &=\frac{1}{R_{k k}} \tilde{q}_{k} 
+  \end{aligned}
+$$
 
 In MATLAB:
 
@@ -341,7 +341,7 @@ end;
 
 **Householder algorithm**
 
-	TODO - [LINK](http://www.seas.ucla.edu/~vandenbe/133A/lectures/qr.pdf)
+TODO - [LINK](http://www.seas.ucla.edu/~vandenbe/133A/lectures/qr.pdf)
 
 ## Schur Factorization
 
@@ -350,14 +350,6 @@ Real Schur form
 Eigenvals and vects
 
 Algorithm
-
-
-
-
-
-
-
-
 
 ## Hessenberg Factorization
 
@@ -374,13 +366,13 @@ Algorithm
 
 
 
-Singular value decomposition (SVD)
+# Singular value decomposition (SVD)
 
-Jacobi method (iterative scheme)
+# Jacobi method (iterative scheme)
 
-Gauss-Seidel method (iterative scheme)
+# Gauss-Seidel method (iterative scheme)
 
-SOR(w) method,
+# SOR(w) method
 
 **Lecture 1** *(September 13th)***:** **[D]** **1.2** Standard Problems of Numerical Linear Algebra; **1.3** General Techniques.
 
