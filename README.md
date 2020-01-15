@@ -95,7 +95,7 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 
 <p align="center"><img src="/tex/5c5dacc34cf2bc4804fcdd2422f1632e.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
 
-  <p align="center"><img src="/tex/a5f2087170fb657c2ccef8b7321b5ca8.svg?invert_in_darkmode&sanitize=true" align=middle width=58.44963299999999pt height=11.232861749999998pt/></p>
+<p align="center"><img src="/tex/25f9864740ce9813725ed11ea1dea5cd.svg?invert_in_darkmode&sanitize=true" align=middle width=58.44963299999999pt height=11.232861749999998pt/></p>
 
 ## Gaussian Elimination
 
@@ -121,11 +121,11 @@ The Cholesky decomposition is roughly twice as efficient as the LU decomposition
 
 Cholesky Algorithm:
 
-  <p align="center"><img src="/tex/185a3e7c7dcc9d43dc4dace918e4ae2f.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
-  
+<p align="center"><img src="/tex/46a9dcf838b81fc0d025f29d9ca50f0b.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
+
 **Example**
 
-  <p align="center"><img src="/tex/754e464a32fa461debf12d8b514b5540.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p> 
+<p align="center"><img src="/tex/380d1e5c3be7ad281dada632823f9b5f.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p>
 
 - <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
 
@@ -147,17 +147,17 @@ Cholesky Algorithm:
 
 Any real square matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> may be decomposed as
 
-  <p align="center"><img src="/tex/40bda0f04a6bf0f7d8e43291c2a70293.svg?invert_in_darkmode&sanitize=true" align=middle width=59.850326249999995pt height=14.42921205pt/></p>
+<p align="center"><img src="/tex/b31353482d3c7f99aed080c3d6a7a799.svg?invert_in_darkmode&sanitize=true" align=middle width=59.850326249999995pt height=14.42921205pt/></p>
 
 **Definition** with <img src="/tex/1afcdb0f704394b16fe85fb40c45ca7a.svg?invert_in_darkmode&sanitize=true" align=middle width=12.99542474999999pt height=22.465723500000017pt/> as a vector:
 
 where <img src="/tex/1afcdb0f704394b16fe85fb40c45ca7a.svg?invert_in_darkmode&sanitize=true" align=middle width=12.99542474999999pt height=22.465723500000017pt/> is an orthogonal matrix and <img src="/tex/1e438235ef9ec72fc51ac5025516017c.svg?invert_in_darkmode&sanitize=true" align=middle width=12.60847334999999pt height=22.465723500000017pt/> is an upper triangular matrix.
 
-  <p align="center"><img src="/tex/e9ff62ee9f467ea6e5ecf731adcbafe4.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=88.76800184999999pt/></p>
+<p align="center"><img src="/tex/6fbd4573d4f97555024f1429d6d99ca1.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=88.76800184999999pt/></p>
 
 vectors <img src="/tex/ea4eed098b4de19e35fb622e5df2383a.svg?invert_in_darkmode&sanitize=true" align=middle width=66.70652339999998pt height=14.15524440000002pt/> are orthonormal <img src="/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/> -vectors:
 
-  <p align="center"><img src="/tex/ccd2324b28c9f308ea0da510402bbf2c.svg?invert_in_darkmode&sanitize=true" align=middle width=414.82575914999995pt height=47.43568499999999pt/></p>
+<p align="center"><img src="/tex/f4a1a3dcc122e2298c81eaf36bbc575e.svg?invert_in_darkmode&sanitize=true" align=middle width=207.1345716pt height=19.3534671pt/></p>
 
 
 
@@ -180,7 +180,7 @@ vectors <img src="/tex/ea4eed098b4de19e35fb622e5df2383a.svg?invert_in_darkmode&s
 
 **Gram-Schmidt algorithm**
 Given: <img src="/tex/205995f88b807b2f5268f7ef4053f049.svg?invert_in_darkmode&sanitize=true" align=middle width=44.39116769999999pt height=19.1781018pt/> matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> with linearly independent columns <img src="/tex/92abd3df4e519ffaaf3007814390ba78.svg?invert_in_darkmode&sanitize=true" align=middle width=69.40820699999999pt height=14.15524440000002pt/>
-  <p align="center"><img src="/tex/c925415a93eb307f84bb8449006ad2eb.svg?invert_in_darkmode&sanitize=true" align=middle width=600.46252695pt height=239.31701969999997pt/></p>
+<p align="center"><img src="/tex/03dcc267d1b8671c4501cae505f5362f.svg?invert_in_darkmode&sanitize=true" align=middle width=584.02414455pt height=239.31701969999997pt/></p>
 
 In MATLAB:
 
@@ -198,7 +198,7 @@ end;
 
 **Householder algorithm**
 
-	TODO - [LINK](http://www.seas.ucla.edu/~vandenbe/133A/lectures/qr.pdf)
+TODO - [LINK](http://www.seas.ucla.edu/~vandenbe/133A/lectures/qr.pdf)
 
 ## Schur Factorization
 
@@ -207,14 +207,6 @@ Real Schur form
 Eigenvals and vects
 
 Algorithm
-
-
-
-
-
-
-
-
 
 ## Hessenberg Factorization
 
@@ -231,13 +223,13 @@ Algorithm
 
 
 
-Singular value decomposition (SVD)
+# Singular value decomposition (SVD)
 
-Jacobi method (iterative scheme)
+# Jacobi method (iterative scheme)
 
-Gauss-Seidel method (iterative scheme)
+# Gauss-Seidel method (iterative scheme)
 
-SOR(w) method,
+# SOR(w) method
 
 **Lecture 1** *(September 13th)***:** **[D]** **1.2** Standard Problems of Numerical Linear Algebra; **1.3** General Techniques.
 
