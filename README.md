@@ -14,9 +14,32 @@
 - **Inversing Triangular Matrix**
 
     Solve directly:
-  <p align="center"><img src="/tex/fc0d1cf012c5b9438ecaa690e04a8d16.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
+    $$
+    \left(\begin{array}{lll}
+    {a} & {b} & {c} \\
+    {0} & {d} & {e} \\
+    {0} & {0} & {f}
+    \end{array}\right)
+    \left(\begin{array}{lll}
+    {x} & {y} & {z} \\
+    {0} & {y} & {v} \\
+    {0} & {0} & {w}
+    \end{array}\right)
+    =
+    \left(\begin{array}{lll}
+    {1} & {0} & {0} \\
+    {0} & {1} & {0} \\
+    {0} & {0} & {1}
+    \end{array}\right)
+    $$
     giving
-  <p align="center"><img src="/tex/8bb630651fee3b5852f65b373f684b00.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
+    $$
+    \left(\begin{array}{lll}
+    {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
+    {0} & {1 / d} & {-e /(f d)} \\
+    {0} & {0} & {1 / f}
+    \end{array}\right)
+    $$
   from which we see directly that the matrix is invertible if all <img src="/tex/7704b8b9e1b077e08a7aabdcbd2bde61.svg?invert_in_darkmode&sanitize=true" align=middle width=24.55100009999999pt height=22.831056599999986pt/> and <img src="/tex/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width=9.81741584999999pt height=22.831056599999986pt/> are different from zero
 
 - **Positive Definite matrix** - <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> <img src="/tex/3add1221abfa79cb14021bc2dacd5725.svg?invert_in_darkmode&sanitize=true" align=middle width=39.82494449999999pt height=19.1781018pt/> symmetric real matrix <img src="/tex/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width=17.73973739999999pt height=22.465723500000017pt/> is said to be positive definite if <img src="/tex/79dc7e289f38476fbcb56fae02e83ccd.svg?invert_in_darkmode&sanitize=true" align=middle width=77.76244739999999pt height=27.91243950000002pt/> for all non-zero <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> in <img src="/tex/3afa189299419b087ab3ae25810cd215.svg?invert_in_darkmode&sanitize=true" align=middle width=19.998202949999992pt height=22.648391699999998pt/>.
@@ -29,9 +52,9 @@
 
 - **Rank of a matrix** - The rank of a matrix is defined as 
 
-  - (a) the maximum number of linearly independent column vectors in the matrix or 
+  - the maximum number of linearly independent column vectors in the matrix or 
 
-  - (b) the maximum number of linearly independent row vectors in the matrix. 
+  - the maximum number of linearly independent row vectors in the matrix. 
 
     Both definitions are equivalent.
 
@@ -51,6 +74,7 @@ which is equivalent to the homogeneous system
   <p align="center"><img src="/tex/a756317b45412de29bc75eaef79d36fe.svg?invert_in_darkmode&sanitize=true" align=middle width=392.23733174999995pt height=88.76800184999999pt/></p>
   Equation ( 4) can be written compactly as
   <p align="center"><img src="/tex/b839829210d7ca234a971a5eabd49b05.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
+  
 - **Singular Value**
 
 - **Condition number**
@@ -59,6 +83,7 @@ which is equivalent to the homogeneous system
   <p align="center"><img src="/tex/db2a2580836f57ddd04e9e5c401f93ab.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
 
   <p align="center"><img src="/tex/35f4df1d8ea027c65275274ea85fdecf.svg?invert_in_darkmode&sanitize=true" align=middle width=309.42971895pt height=117.1525905pt/></p>
+  
 - Rank1/2 approximation
 
 # Matrix Factorization:
