@@ -15,12 +15,12 @@
     
  
 	
-  <p align="center"><img src="/tex/2b57f573b640836333449e4848339817.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
-
+  <p align="center"><img src="/tex/fc0d1cf012c5b9438ecaa690e04a8d16.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
+  
     giving
 
-  <p align="center"><img src="/tex/0378d2b5bdbe669e569a49ca2cf086af.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
-
+  <p align="center"><img src="/tex/8bb630651fee3b5852f65b373f684b00.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
+  
     from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
 
 - **Positive Definite matrix** - <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> <img src="/tex/3add1221abfa79cb14021bc2dacd5725.svg?invert_in_darkmode&sanitize=true" align=middle width=39.82494449999999pt height=19.1781018pt/> symmetric real matrix <img src="/tex/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width=17.73973739999999pt height=22.465723500000017pt/> is said to be positive definite if <img src="/tex/79dc7e289f38476fbcb56fae02e83ccd.svg?invert_in_darkmode&sanitize=true" align=middle width=77.76244739999999pt height=27.91243950000002pt/> for all non-zero <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> in <img src="/tex/3afa189299419b087ab3ae25810cd215.svg?invert_in_darkmode&sanitize=true" align=middle width=19.998202949999992pt height=22.648391699999998pt/>.
@@ -61,28 +61,12 @@
 
 - **Condition number**
 
-- 
-
 - **Norms**
-
-    $$
-    \begin{aligned}
-    &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
-    &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
-    \end{aligned}
-    $$
-
-    $$
-    \begin{array}{lll}
-    {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
-    {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
-    {L^{2}-\text { norm }} & {|\mathbf{x}|_{2}} & {\sqrt{14}} & {3.742} \\
-    {L^{3}-\text { norm }} & {|\mathbf{x}|_{3}} & {6^{2 / 3}} & {3.302} \\
-    {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
-    {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
-    \end{array}
-    $$
-
+- 
+  <p align="center"><img src="/tex/3658cbac98be3029be3cab3af1c3e101.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
+    
+  <p align="center"><img src="/tex/44c6d8b74677e4fd9e5d66cc7d772304.svg?invert_in_darkmode&sanitize=true" align=middle width=290.13740084999995pt height=211.67313915pt/></p>
+    
 - Rank1/2 approximation
 
 # Matrix Factorization:
