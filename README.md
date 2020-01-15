@@ -15,24 +15,7 @@
     
  
 	
-    $$
-    \left(\begin{array}{lll}
-    {a} & {b} & {c} \\
-    {0} & {d} & {e} \\
-    {0} & {0} & {f}
-    \end{array}\right)
-    \left(\begin{array}{lll}
-    {x} & {y} & {z} \\
-    {0} & {y} & {v} \\
-    {0} & {0} & {w}
-    \end{array}\right)
-    =
-    \left(\begin{array}{lll}
-    {1} & {0} & {0} \\
-    {0} & {1} & {0} \\
-    {0} & {0} & {1}
-    \end{array}\right)
-    $$
+  <p align="center"><img src="/tex/fc0d1cf012c5b9438ecaa690e04a8d16.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
 
     giving
 
