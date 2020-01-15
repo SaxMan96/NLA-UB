@@ -1,11 +1,9 @@
 # Problems
-<p align="center"><img src="/tex/607d9ff0b7cbe7286243d8abea3971d3.svg?invert_in_darkmode&sanitize=true" align=middle width=0.0pt height=0.0pt/></p>
 
 - Linear System: <img src="/tex/70681e99f542745bf6a0c56bd4600b39.svg?invert_in_darkmode&sanitize=true" align=middle width=50.69621369999999pt height=22.831056599999986pt/>
 - Least Squares Problem <img src="/tex/58230adccafdd16765dfcfdcd5a78f0f.svg?invert_in_darkmode&sanitize=true" align=middle width=73.68721634999999pt height=24.65753399999998pt/>
 - Eigenvalue problem <img src="/tex/4cc103f3eeb0d48b1c4d816d4ca52803.svg?invert_in_darkmode&sanitize=true" align=middle width=62.62548764999999pt height=22.831056599999986pt/>, where <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> - vector <img src="/tex/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg?invert_in_darkmode&sanitize=true" align=middle width=9.58908224999999pt height=22.831056599999986pt/> - scalar
 - Singular Value problem <img src="/tex/0fcfbd523dff9f2e0696b4493cf6da58.svg?invert_in_darkmode&sanitize=true" align=middle width=85.30987904999999pt height=27.6567522pt/>
-
 
 # Definitions
 
@@ -62,7 +60,7 @@
 
   Let <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> be a linear transformation represented by a matrix A. If there is a vector <img src="/tex/396f39b6dd4c8d6ac53c15f787027552.svg?invert_in_darkmode&sanitize=true" align=middle width=85.34026049999999pt height=22.831056599999986pt/> such that:
 
-  <img src="/tex/f3bb70f791561eade25e2f232027d264.svg?invert_in_darkmode&sanitize=true" align=middle width=73.65286664999998pt height=22.831056599999986pt/>
+  <p align="center"><img src="/tex/0adadbf6c02befc4d905cbfbe2a79db0.svg?invert_in_darkmode&sanitize=true" align=middle width=73.65286664999999pt height=11.4155283pt/></p>
 
   for some scalar <img src="/tex/722d262217f99de10f2a57fe9cb64338.svg?invert_in_darkmode&sanitize=true" align=middle width=14.155307099999991pt height=22.831056599999986pt/> then <img src="/tex/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg?invert_in_darkmode&sanitize=true" align=middle width=9.58908224999999pt height=22.831056599999986pt/> is called the eigenvalue of A with corresponding (right) eigenvector <img src="/tex/d05b996d2c08252f77613c25205a0f04.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/>.
 
@@ -70,33 +68,32 @@
   <p align="center"><img src="/tex/b5a0b03d2dc92d81704b5a59ce7ead0f.svg?invert_in_darkmode&sanitize=true" align=middle width=177.55163249999998pt height=88.76800184999999pt/></p>
   with eigenvalue <img src="/tex/722d262217f99de10f2a57fe9cb64338.svg?invert_in_darkmode&sanitize=true" align=middle width=14.155307099999991pt height=22.831056599999986pt/> then the corresponding eigenvectors satisfy
   <p align="center"><img src="/tex/25724d24c06e752352d243020ba84e20.svg?invert_in_darkmode&sanitize=true" align=middle width=326.2159461pt height=88.76800184999999pt/></p>
-which is equivalent to the homogeneous system
+  which is equivalent to the homogeneous system
   <p align="center"><img src="/tex/a756317b45412de29bc75eaef79d36fe.svg?invert_in_darkmode&sanitize=true" align=middle width=392.23733174999995pt height=88.76800184999999pt/></p>
   Equation ( 4) can be written compactly as
-  <p align="center"><img src="/tex/b839829210d7ca234a971a5eabd49b05.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
+  <p align="center"><img src="/tex/5fe518da3d293c7bbd7b9d448c0ba22b.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
   
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-  <p align="center"><img src="/tex/db2a2580836f57ddd04e9e5c401f93ab.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
+  <p align="center"><img src="/tex/f8cc8609e2e7974c4513e3a451d0a8fc.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
 
-  <p align="center"><img src="/tex/35f4df1d8ea027c65275274ea85fdecf.svg?invert_in_darkmode&sanitize=true" align=middle width=309.42971895pt height=117.1525905pt/></p>
+  <p align="center"><img src="/tex/4328b68f4e761c70144de0d5ee99ffa2.svg?invert_in_darkmode&sanitize=true" align=middle width=309.42971895pt height=117.1525905pt/></p>
   
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is a representation of <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
-<p align="center"><img src="/tex/5309fbf7b6112c3fb2fab4793820496a.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
+
+<p align="center"><img src="/tex/a538e772530ff07b8bc8f1a7de83aba9.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
 - Forward Substitution
 
   for <img src="/tex/081b3265e50f611c00daeffa91931873.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/> to <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>
   <p align="center"><img src="/tex/1eabfd12ac210a4d1a5e393fb27ad2f9.svg?invert_in_darkmode&sanitize=true" align=middle width=189.94192139999998pt height=49.315569599999996pt/></p>
-  
-
-end for
+  end for
 
 - Backward Substitution
 
@@ -104,7 +101,8 @@ end for
 To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bdae6d07.svg?invert_in_darkmode&sanitize=true" align=middle width=50.69621369999999pt height=22.831056599999986pt/> we need the following matrix factorization, which is just a restatement of Gaussian elimination.
 
 ## LU Factorization
-<p align="center"><img src="/tex/ce2b2f16485db094ca7afcbf5d48e8af.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
+
+<p align="center"><img src="/tex/59e5ce6b854851b5d5f9301f3c6234cc.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
 **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
 <p align="center"><img src="/tex/eab43629b44054198bbc9c76abd17b9f.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
   **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
