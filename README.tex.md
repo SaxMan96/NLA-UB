@@ -15,24 +15,24 @@
     
  
 	
-    $$
-    \left(\begin{array}{lll}
-    {a} & {b} & {c} \\
-    {0} & {d} & {e} \\
-    {0} & {0} & {f}
-    \end{array}\right)
-    \left(\begin{array}{lll}
-    {x} & {y} & {z} \\
-    {0} & {y} & {v} \\
-    {0} & {0} & {w}
-    \end{array}\right)
-    =
-    \left(\begin{array}{lll}
-    {1} & {0} & {0} \\
-    {0} & {1} & {0} \\
-    {0} & {0} & {1}
-    \end{array}\right)
-    $$
+  $$
+  \left(\begin{array}{lll}
+  {a} & {b} & {c} \\
+  {0} & {d} & {e} \\
+  {0} & {0} & {f}
+  \end{array}\right)
+  \left(\begin{array}{lll}
+  {x} & {y} & {z} \\
+  {0} & {y} & {v} \\
+  {0} & {0} & {w}
+  \end{array}\right)
+  =
+  \left(\begin{array}{lll}
+  {1} & {0} & {0} \\
+  {0} & {1} & {0} \\
+  {0} & {0} & {1}
+  \end{array}\right)
+  $$
 
     giving
 
