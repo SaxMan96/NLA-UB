@@ -12,17 +12,22 @@
 - **Inversing Triangular Matrix**
 
     It is not too difficult to solve directly
-
+    
+ 
+	
     $$
     \left(\begin{array}{lll}
     {a} & {b} & {c} \\
     {0} & {d} & {e} \\
     {0} & {0} & {f}
-    \end{array}\right)\left(\begin{array}{lll}
+    \end{array}\right)
+    \left(\begin{array}{lll}
     {x} & {y} & {z} \\
     {0} & {y} & {v} \\
     {0} & {0} & {w}
-    \end{array}\right)=\left(\begin{array}{lll}
+    \end{array}\right)
+    =
+    \left(\begin{array}{lll}
     {1} & {0} & {0} \\
     {0} & {1} & {0} \\
     {0} & {0} & {1}
@@ -32,7 +37,7 @@
     giving
 
     $$
-    \left(\begin{array}{ccc}
+    \left(\begin{array}{lll}
     {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
     {0} & {1 / d} & {-e /(f d)} \\
     {0} & {0} & {1 / f}
@@ -112,9 +117,7 @@ A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.sv
 - Forward Substitution
 
   for <img src="/tex/081b3265e50f611c00daeffa91931873.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/> to <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>
-   	$$
-   	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
-   	$$	
+  <p align="center"><img src="/tex/1eabfd12ac210a4d1a5e393fb27ad2f9.svg?invert_in_darkmode&sanitize=true" align=middle width=189.94192139999998pt height=49.315569599999996pt/></p>
   end for
 
 - Backward Substitution
@@ -170,7 +173,7 @@ Cholesky Algorithm:
     $$
 **Example**
 
-	<p align="center"><img src="/tex/db06fc8dce12ad92fcf7e4cbb7264c31.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p> 
+	<p align="center"><img src="/tex/62fd4b4b32742002390b3bea90f745d1.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p> 
 
 - <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
 
