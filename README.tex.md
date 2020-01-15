@@ -69,16 +69,16 @@ $$
   for some scalar $\lambda,$ then $\lambda$ is called the eigenvalue of A with corresponding (right) eigenvector $\mathbf{X}$.
 
   Letting A be a $k \times k$ square matrix
-$$
+  $$
   \left[\begin{array}{cccc}
   {a_{11}} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}} & {\cdots} & {a_{2 k}} \\
   {\vdots} & {\vdots} & {\ddots} & {\vdots} \\
   {a_{k 1}} & {a_{k 2}} & {\cdots} & {a_{k k}}
   \end{array}\right]
-$$
+  $$
   with eigenvalue $\lambda,$ then the corresponding eigenvectors satisfy
-$$
+  $$
   \left[\begin{array}{cccc}
   {a_{11}} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}} & {\cdots} & {a_{2 k}} \\
@@ -95,9 +95,9 @@ $$
   {\vdots} \\
   {x_{k}}
   \end{array}\right]
-$$
-  which is equivalent to the homogeneous system
-$$
+  $$
+which is equivalent to the homogeneous system
+  $$
   \left[\begin{array}{cccc}
   {a_{11}-\lambda} & {a_{12}} & {\cdots} & {a_{1 k}} \\
   {a_{21}} & {a_{22}-\lambda} & {\cdots} & {a_{2 k}} \\
@@ -114,49 +114,49 @@ $$
   {\vdots} \\
   {0}
   \end{array}\right]
-$$
+  $$
   Equation ( 4) can be written compactly as
-$$
-  (A-\lambda I) X=0
-$$
+  $$
+  (A-\lambda I) X=0$$
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-$$
+  $$
     \begin{aligned}
     &|\mathbf{x}|_{\infty} \equiv \max \left|x_{i}\right|\\
     &|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}
     \end{aligned}
-$$
+  $$
 
-$$
-    \begin{array}{lll}
-    {\text { name }} & {\text { symbol value }} & {\text { approx. }} \\
+  $$
+\begin{array}{llll}
+    {\text { name }} & {\text { symbol}} & {\text {  value }} & {\text { approx. }} \\
     {L^{1}-\text { norm }} & {|\mathbf{x}|_{1}} & {6} & {6.000} \\
     {L^{2}-\text { norm }} & {|\mathbf{x}|_{2}} & {\sqrt{14}} & {3.742} \\
     {L^{3}-\text { norm }} & {|\mathbf{x}|_{3}} & {6^{2 / 3}} & {3.302} \\
     {L^{4}-\text { norm }} & {|\mathbf{x}|_{4}} & {2^{1 / 4} \sqrt{7}} & {3.146} \\
     {L^{\infty}-\text { norm }} & {|\mathbf{x}|_{\infty}} & {3} & {3.000}
     \end{array}
-$$
-
+  $$
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix $A$ is a representation of $A$ as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 $$
-  \left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]
+\left[\begin{array}{cccc}{a_{11}} & {} & {} & {} \\ {a_{21}} & {a_{22}} & {} & {} \\ {\vdots} & {\vdots} & {\ddots} & {} \\ {a_{n 1}} & {a_{n 2}} & {\ldots} & {a_{n n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]
 $$
 - Forward Substitution
 
   for $i=1$ to $n$
-$$
+  $$
    	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
-$$
-  end for
+  $$
+  
+
+end for
 
 - Backward Substitution
 
