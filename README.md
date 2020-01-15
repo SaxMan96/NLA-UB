@@ -12,8 +12,6 @@
 - **Inversing Triangular Matrix**
 
     Solve directly:
-    
- 
 	
   <p align="center"><img src="/tex/fc0d1cf012c5b9438ecaa690e04a8d16.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
   
@@ -21,7 +19,7 @@
 
   <p align="center"><img src="/tex/8bb630651fee3b5852f65b373f684b00.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
   
-    from which we see directly that the matrix is invertible if all $a, d$ and $f$ are different from zero.
+    from which we see directly that the matrix is invertible if all $a,d$ and $f$ are different from zero
 
 - **Positive Definite matrix** - <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> <img src="/tex/3add1221abfa79cb14021bc2dacd5725.svg?invert_in_darkmode&sanitize=true" align=middle width=39.82494449999999pt height=19.1781018pt/> symmetric real matrix <img src="/tex/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width=17.73973739999999pt height=22.465723500000017pt/> is said to be positive definite if <img src="/tex/79dc7e289f38476fbcb56fae02e83ccd.svg?invert_in_darkmode&sanitize=true" align=middle width=77.76244739999999pt height=27.91243950000002pt/> for all non-zero <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> in <img src="/tex/3afa189299419b087ab3ae25810cd215.svg?invert_in_darkmode&sanitize=true" align=middle width=19.998202949999992pt height=22.648391699999998pt/>.
 
@@ -55,25 +53,25 @@
   <p align="center"><img src="/tex/a756317b45412de29bc75eaef79d36fe.svg?invert_in_darkmode&sanitize=true" align=middle width=392.23733174999995pt height=88.76800184999999pt/></p>
   Equation ( 4) can be written compactly as
 
-  <p align="center"><img src="/tex/5fe518da3d293c7bbd7b9d448c0ba22b.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>​
+  <p align="center"><img src="/tex/5fe518da3d293c7bbd7b9d448c0ba22b.svg?invert_in_darkmode&sanitize=true" align=middle width=108.35597849999998pt height=16.438356pt/></p>
 
 - **Singular Value**
 
 - **Condition number**
 
 - **Norms**
-- 
-  <p align="center"><img src="/tex/3658cbac98be3029be3cab3af1c3e101.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
-    
+
+  <p align="center"><img src="/tex/db2a2580836f57ddd04e9e5c401f93ab.svg?invert_in_darkmode&sanitize=true" align=middle width=152.7998373pt height=78.703779pt/></p>
+  
   <p align="center"><img src="/tex/44c6d8b74677e4fd9e5d66cc7d772304.svg?invert_in_darkmode&sanitize=true" align=middle width=290.13740084999995pt height=211.67313915pt/></p>
-    
+  
 - Rank1/2 approximation
 
 # Matrix Factorization:
 
 A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is a representation of <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 
-<img src="/tex/8784602d05fa48766076c2f5aabdf3a1.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=96.98719139999999pt/>
+<p align="center"><img src="/tex/60f23d3df30321fc804c70a2c16ee962.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
 
 - Forward Substitution
 
@@ -83,22 +81,22 @@ A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.sv
 
 - Backward Substitution
 
-  An analogous idea*, back substitution*, works if <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is upper triangular. 
+  An analogous idea, back substitution, works if <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is upper triangular. 
 To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bdae6d07.svg?invert_in_darkmode&sanitize=true" align=middle width=50.69621369999999pt height=22.831056599999986pt/> we need the following matrix factorization, which is just a restatement of Gaussian elimination.
 
 ## LU Factorization
 
-​		<img src="/tex/f875292bec22a4435a4347c372969033.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=67.39784699999998pt/>
+<p align="center"><img src="/tex/ce2b2f16485db094ca7afcbf5d48e8af.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
 
 **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
 
-​		<img src="/tex/c1c0fed01940f1c564dd9fd6c7551797.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=67.39784699999998pt/>
+<p align="center"><img src="/tex/eab43629b44054198bbc9c76abd17b9f.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
 
-**0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
+  **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
 
-​		<img src="/tex/3e72395e5dc12efddc7732b813ff0cab.svg?invert_in_darkmode&sanitize=true" align=middle width=160.04795894999998pt height=67.39784699999998pt/> 			  			<img src="/tex/4f28d963545e93ec03df74bcf1e72a7b.svg?invert_in_darkmode&sanitize=true" align=middle width=167.35171034999996pt height=67.39784699999998pt/>
+<p align="center"><img src="/tex/5a888e473d55619c3e7d23c42fd457ea.svg?invert_in_darkmode&sanitize=true" align=middle width=430.16098289999996pt height=129.86414265pt/></p>
 
-		<img src="/tex/b7800468c321276fd038c1496efa3cca.svg?invert_in_darkmode&sanitize=true" align=middle width=58.449632999999984pt height=22.465723500000017pt/>
+  <img src="/tex/b7800468c321276fd038c1496efa3cca.svg?invert_in_darkmode&sanitize=true" align=middle width=58.449632999999984pt height=22.465723500000017pt/>
 
 ## Gaussian Elimination
 
