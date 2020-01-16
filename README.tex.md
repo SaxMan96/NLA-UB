@@ -147,7 +147,7 @@
 
 A factorization of the matrix $A$ is a representation of $A$ as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 
-  $$
+$$
   \left[\begin{array}{cccc}
   {a_{11}} & {} & {} & {} \\ 
   {a_{21}} &  {a_{22}} & {} & {} \\ 
@@ -166,15 +166,17 @@ A factorization of the matrix $A$ is a representation of $A$ as a product of sev
   {\vdots} \\ 
   {b_{n}}
   \end{array}\right]
-  $$
+$$
+
 - Forward Substitution
 
-  for $i=1$ to $n$
+  
   $$
-   	x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i}
+  \text{for } i=1 \text{ to } n \\
+  \quad x_{i}=\left(b_{i}-\sum_{k=1}^{i-1} a_{i k} x_{k}\right) / a_{i i} \\
+  \text{end for}
   $$
-  end for
-
+  
 - Backward Substitution
 
   An analogous idea, back substitution, works if $A$ is upper triangular. 
@@ -182,24 +184,25 @@ To use this to solve a general system $A x=b$ we need the following matrix facto
 
 ## LU Factorization
 
-  $$
-A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
+LU on example:
+$$
+  A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix}
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { ? } & { 1 } & { 0 } \\ { ? } & { ? } & { 1 } \end{array} \right]
-  $$
+$$
 **2** and **-3** goes down to $L$ with changed sign
-  $$
+$$
   U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { -8 } & { 16 } \end{array} \right] \begin{matrix}\\ \\\textbf{0.5}R_{2}+R_{3}\end{matrix} 
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { ? } & { 1 } \end{array} \right]
-  $$
+$$
   **0.5** goes to $L$ with minus sign.
-  $$
+$$
 U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { 0 } & { 15.5 } \end{array} \right] 
 \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]
-  $$
+$$
 
-  $$
-    A = LU
-  $$
+$$
+A = LU
+$$
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose $a_{i,k}$ and swap that  $k$-th row with $i$-th row `for i in (1,n) `.
@@ -223,21 +226,21 @@ Important thing $L^{-1} \neq L^{T}$ and  $U^{-1} \neq U^{T}$ - check **inversion
 The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. $\bf{A}$ needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. $A = LL^{T}$, where $L$ is a lower triangular matrix with real and positive diagonal entries.
 
 Cholesky Algorithm:
-  $$
+$$
     \begin{aligned}
     l_{1,1} &=\sqrt{a_{11}} \\
     l_{j, 1} &=\frac{a_{j 1}}{l_{11}}, \quad j \in[2, n] \\
     l_{i, i} &=\sqrt{a_{i i}-\sum_{p=1}^{i-1} l_{i p}^{2}}, \quad i \in[2, n] \\
     l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
     \end{aligned}
-  $$
+$$
 **Example**
-  $$
+$$
   A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
   {12} & {37} & {-43} \\
   {-16} & {-43} & {98}
   \end{array}\right]
-  $$
+$$
 - $i = 1:$
   $$
   \begin{aligned}
@@ -266,19 +269,19 @@ Cholesky Algorithm:
 ## QR Factorization
 
 Any real square matrix $A$ may be decomposed as
-  $$
+$$
   A=Q R
-  $$
+$$
 **Definition** with $Q$ as a vector:
 
 where $Q$ is an orthogonal matrix and $R$ is an upper triangular matrix.
-  $$
+$$
   A=\left[\begin{array}{llll}{q_{1}} & {q_{2}} & {\cdots} & {q_{n}}\end{array}\right]\left[\begin{array}{cccc}{R_{11}} & {R_{12}} & {\cdots} & {R_{1 n}} \\ {0} & {R_{22}} & {\cdots} & {R_{2 n}} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {0} & {0} & {\cdots} & {R_{n n}}\end{array}\right]
-  $$
+$$
 vectors $q_{1}, \ldots, q_{n}$ are orthonormal $m$ -vectors:
-  $$
+$$
   \left\|q_{i}\right\|=1, \quad q_{i}^{T} q_{j}=0 \quad \text{if} i \neq j
-  $$
+$$
 **QR factorization solves:**
 
 - linear equations
