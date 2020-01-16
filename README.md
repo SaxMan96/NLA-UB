@@ -111,18 +111,10 @@ Important thing <img src="/tex/4c81e1f11c1e21db89203acade86ffb6.svg?invert_in_da
 
 The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. <img src="/tex/71a38687d31c242a33a3ec23e25e3ba0.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/> needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. <img src="/tex/95a6c12ed4f3720ff49aeb54580956e7.svg?invert_in_darkmode&sanitize=true" align=middle width=66.15463304999999pt height=27.6567522pt/>, where <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> is a lower triangular matrix with real and positive diagonal entries.
 
-Cholesky Algorithm:
-<p align="center"><img src="/tex/46a9dcf838b81fc0d025f29d9ca50f0b.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
-**Example**
-<p align="center"><img src="/tex/380d1e5c3be7ad281dada632823f9b5f.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p>
-- <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/679fdcd6f8fcd870707846b6e84ee99a.svg?invert_in_darkmode&sanitize=true" align=middle width=276.2605362pt height=98.8387554pt/></p>
-- <img src="/tex/0913491f80945049ed061e8767a50fe3.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/49b01ce4c91b6fb26dc55b4c2b717b67.svg?invert_in_darkmode&sanitize=true" align=middle width=544.1757419999999pt height=59.1786591pt/></p>
-- <img src="/tex/b8fe7a8f30cfdea91cd4bb99033d6e21.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/b6dbc11f79b366f3a10fd2ab594b1728.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
+- Cholesky Algorithm:
 
-<p align="center"><img src="/tex/fa40a0d636fd317180e831bf13d7648f.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
+<p align="center"><img src="/tex/d303af8f190314e1ce8ced3c8ee2f8ae.svg?invert_in_darkmode&sanitize=true" align=middle width=2163.4269607499996pt height=180.72714495pt/></p>
+
 ## QR Factorization
 
 Any real square matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> may be decomposed as
