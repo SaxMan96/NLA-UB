@@ -222,47 +222,38 @@ Important thing $L^{-1} \neq L^{T}$ and  $U^{-1} \neq U^{T}$ - check **inversion
 
 The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. $\bf{A}$ needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. $A = LL^{T}$, where $L$ is a lower triangular matrix with real and positive diagonal entries.
 
-Cholesky Algorithm:
-$$
-    \begin{aligned}
-    l_{1,1} &=\sqrt{a_{11}} \\
-    l_{j, 1} &=\frac{a_{j 1}}{l_{11}}, \quad j \in[2, n] \\
-    l_{i, i} &=\sqrt{a_{i i}-\sum_{p=1}^{i-1} l_{i p}^{2}}, \quad i \in[2, n] \\
-    l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
-    \end{aligned}
-$$
-**Example**
-$$
-  A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
-  {12} & {37} & {-43} \\
-  {-16} & {-43} & {98}
-  \end{array}\right]
-$$
-- $i = 1:$
-$$
-  \begin{aligned}
-    & l_{1,1} = \sqrt{a_{1,1}} = 2 \\
-    & l_{2,1} = \frac{a_{2,1}}{l_{1,1}} = 6 \\
-    & l_{3,1} = \frac{a_{3,1}}{l_{1,1}} = -8
-    \end{aligned} \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { ? } & { 0 } \\ { - 8 } & { ? } & { ? } \end{array} \right]
-$$
-- $i = 2:$
-$$
-  \begin{aligned}
-    & { l _ { 2,2 } = \sqrt { a _ { 2,2 } -  l _ { 2,1 } ^ { 2 }} }  = \sqrt{37 - 6^{2}} = 1\\ 
-    & { l_ { 3,2 } = \left( a _ { 3,2 } - l _ { 2 , 1 } \cdot l _ { 3,1 } \right) / l _ { 2,2 } } = (- 43 - (6 \cdot (- 8))/1 = 5 \end{aligned}
-     \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { ? } \end{array} \right] 
-$$
-- $i = 3$
-$$
-  \begin{aligned} 
-  l _ { 3,3 } & = \sqrt { a _ { 3,3 } - \left( l _ { 3,1 } ^ { 2 } + l _ { 3,2 } ^ { 2 } \right) } = \\ & = \sqrt { 98 - \left( ( - 8 ) ^ { 2 } + 5 ^ { 2 } \right) } = \\ & = \sqrt { 98 - ( 64 + 25 ) } = \\ & = \sqrt { 98 - 89 } = \sqrt { 9 } = 3 \end{aligned}
-$$
+- Cholesky Algorithm:
 
 $$
-  L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { 3 } \end{array} \right]
-\quad L^{T} = \left[ \begin{array} { r r r } { 2 } & { 6 } & { -8 } \\ { 0 } & { 1 } & { 5 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] 
+\begin{aligned}
+l_{1,1} &=\sqrt{a_{11}} \\
+l_{j, 1} &=\frac{a_{j 1}}{l_{11}}, \quad j \in[2, n] \\
+l_{i, i} &=\sqrt{a_{i i}-\sum_{p=1}^{i-1} l_{i p}^{2}}, \quad i \in[2, n] \\
+l_{j, i} &=\left(a_{j i}-\sum_{p=1}^{i-1} l_{i p} l_{j p}\right) / l_{i i}, \quad i \in[2, n-1], j \in[i+1, n]
+\end{aligned} \\
+\text{Example:}\\
+A = \left[\begin{array}{ccc}{4} & {12} & {-16} \\
+{12} & {37} & {-43} \\
+{-16} & {-43} & {98}
+\end{array}\right]\\
+i = 1:\\
+\begin{aligned}
+& l_{1,1} = \sqrt{a_{1,1}} = 2 \\
+& l_{2,1} = \frac{a_{2,1}}{l_{1,1}} = 6 \\
+& l_{3,1} = \frac{a_{3,1}}{l_{1,1}} = -8
+\end{aligned} \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { ? } & { 0 } \\ { - 8 } & { ? } & { ? } \end{array} \right]\\
+i = 2:\\
+\begin{aligned}
+& { l _ { 2,2 } = \sqrt { a _ { 2,2 } -  l _ { 2,1 } ^ { 2 }} }  = \sqrt{37 - 6^{2}} = 1\\ 
+& { l_ { 3,2 } = \left( a _ { 3,2 } - l _ { 2 , 1 } \cdot l _ { 3,1 } \right) / l _ { 2,2 } } = (- 43 - (6 \cdot (- 8))/1 = 5 \end{aligned}
+\quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { ? } \end{array} \right]\\
+i = 3:\\
+\begin{aligned} 
+l _ { 3,3 } & = \sqrt { a _ { 3,3 } - \left( l _ { 3,1 } ^ { 2 } + l _ { 3,2 } ^ { 2 } \right) } = \\ & = \sqrt { 98 - \left( ( - 8 ) ^ { 2 } + 5 ^ { 2 } \right) } = \\ & = \sqrt { 98 - ( 64 + 25 ) } = \\ & = \sqrt { 98 - 89 } = \sqrt { 9 } = 3 \end{aligned}\\
+L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { 3 } \end{array} \right]
+\quad L^{T} = \left[ \begin{array} { r r r } { 2 } & { 6 } & { -8 } \\ { 0 } & { 1 } & { 5 } \\ { 0 } & { 0 } & { 3 } \end{array} \right]
 $$
+
 ## QR Factorization
 
 Any real square matrix $A$ may be decomposed as
