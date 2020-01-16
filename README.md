@@ -12,32 +12,9 @@
 - **Inversing Triangular Matrix**
 
     Solve directly:
-    $$
-    \left(\begin{array}{lll}
-    {a} & {b} & {c} \\
-    {0} & {d} & {e} \\
-    {0} & {0} & {f}
-    \end{array}\right)
-    \left(\begin{array}{lll}
-    {x} & {y} & {z} \\
-    {0} & {y} & {v} \\
-    {0} & {0} & {w}
-    \end{array}\right)
-    =
-    \left(\begin{array}{lll}
-    {1} & {0} & {0} \\
-    {0} & {1} & {0} \\
-    {0} & {0} & {1}
-    \end{array}\right)
-    $$
+  <p align="center"><img src="/tex/24202f517cd22d547ff03367cfba71b5.svg?invert_in_darkmode&sanitize=true" align=middle width=340.8791265pt height=59.1786591pt/></p>
     giving
-    $$
-    \left(\begin{array}{lll}
-    {1 / a} & {-b /(a d)} & {(b e-c d) /(a f d)} \\
-    {0} & {1 / d} & {-e /(f d)} \\
-    {0} & {0} & {1 / f}
-    \end{array}\right)
-    $$
+  <p align="center"><img src="/tex/0378d2b5bdbe669e569a49ca2cf086af.svg?invert_in_darkmode&sanitize=true" align=middle width=272.6220915pt height=59.1786591pt/></p>
   from which we see directly that the matrix is invertible if all <img src="/tex/7704b8b9e1b077e08a7aabdcbd2bde61.svg?invert_in_darkmode&sanitize=true" align=middle width=24.55100009999999pt height=22.831056599999986pt/> and <img src="/tex/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width=9.81741584999999pt height=22.831056599999986pt/> are different from zero
 
 - **Positive Definite matrix** - <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> <img src="/tex/3add1221abfa79cb14021bc2dacd5725.svg?invert_in_darkmode&sanitize=true" align=middle width=39.82494449999999pt height=19.1781018pt/> symmetric real matrix <img src="/tex/fb97d38bcc19230b0acd442e17db879c.svg?invert_in_darkmode&sanitize=true" align=middle width=17.73973739999999pt height=22.465723500000017pt/> is said to be positive definite if <img src="/tex/79dc7e289f38476fbcb56fae02e83ccd.svg?invert_in_darkmode&sanitize=true" align=middle width=77.76244739999999pt height=27.91243950000002pt/> for all non-zero <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> in <img src="/tex/3afa189299419b087ab3ae25810cd215.svg?invert_in_darkmode&sanitize=true" align=middle width=19.998202949999992pt height=22.648391699999998pt/>.
@@ -88,7 +65,7 @@
 
 A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is a representation of <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 
-<p align="center"><img src="/tex/a538e772530ff07b8bc8f1a7de83aba9.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
+  <p align="center"><img src="/tex/d62c34275caedeae12be01a82e323127.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
 - Forward Substitution
 
   for <img src="/tex/081b3265e50f611c00daeffa91931873.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/> to <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>
@@ -102,13 +79,13 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 
 ## LU Factorization
 
-<p align="center"><img src="/tex/59e5ce6b854851b5d5f9301f3c6234cc.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/6b57b7e099e3fc3e2a60cc3ddfcbe968.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
 **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
-<p align="center"><img src="/tex/eab43629b44054198bbc9c76abd17b9f.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/f2be6bd38c3d554bf5cbad848617f107.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
   **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
-<p align="center"><img src="/tex/5c5dacc34cf2bc4804fcdd2422f1632e.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/758ab793c4391fd2fe8d2eaaf8163cb2.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
 
-<p align="center"><img src="/tex/25f9864740ce9813725ed11ea1dea5cd.svg?invert_in_darkmode&sanitize=true" align=middle width=58.44963299999999pt height=11.232861749999998pt/></p>
+  <p align="center"><img src="/tex/a5f2087170fb657c2ccef8b7321b5ca8.svg?invert_in_darkmode&sanitize=true" align=middle width=58.44963299999999pt height=11.232861749999998pt/></p>
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose <img src="/tex/e84705df9be792193f6e243da302768c.svg?invert_in_darkmode&sanitize=true" align=middle width=24.51021539999999pt height=14.15524440000002pt/> and swap that  <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>-th row with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/>-th row `for i in (1,n) `.
@@ -132,27 +109,27 @@ Important thing <img src="/tex/4c81e1f11c1e21db89203acade86ffb6.svg?invert_in_da
 The Cholesky decomposition is roughly twice as efficient as the LU decomposition for solving systems of linear equations. <img src="/tex/71a38687d31c242a33a3ec23e25e3ba0.svg?invert_in_darkmode&sanitize=true" align=middle width=14.29216634999999pt height=22.55708729999998pt/> needs to be symmetric. Every symmetric, positive definite matrix A can be decomposed into a product of a unique lower triangular matrix L and its transpose. <img src="/tex/95a6c12ed4f3720ff49aeb54580956e7.svg?invert_in_darkmode&sanitize=true" align=middle width=66.15463304999999pt height=27.6567522pt/>, where <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> is a lower triangular matrix with real and positive diagonal entries.
 
 Cholesky Algorithm:
-<p align="center"><img src="/tex/46a9dcf838b81fc0d025f29d9ca50f0b.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
+  <p align="center"><img src="/tex/185a3e7c7dcc9d43dc4dace918e4ae2f.svg?invert_in_darkmode&sanitize=true" align=middle width=406.9916631pt height=180.72714495pt/></p>
 **Example**
-<p align="center"><img src="/tex/380d1e5c3be7ad281dada632823f9b5f.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/754e464a32fa461debf12d8b514b5540.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p>
 - <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/679fdcd6f8fcd870707846b6e84ee99a.svg?invert_in_darkmode&sanitize=true" align=middle width=276.2605362pt height=98.8387554pt/></p>
+  <p align="center"><img src="/tex/31d368e031b6e1c1af5427239ba6ae4d.svg?invert_in_darkmode&sanitize=true" align=middle width=276.2605362pt height=98.8387554pt/></p>
 - <img src="/tex/0913491f80945049ed061e8767a50fe3.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/49b01ce4c91b6fb26dc55b4c2b717b67.svg?invert_in_darkmode&sanitize=true" align=middle width=544.1757419999999pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/c703f5243962228b4fadab5f8656e219.svg?invert_in_darkmode&sanitize=true" align=middle width=544.1757419999999pt height=59.1786591pt/></p>
 - <img src="/tex/b8fe7a8f30cfdea91cd4bb99033d6e21.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/>
-<p align="center"><img src="/tex/b6dbc11f79b366f3a10fd2ab594b1728.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
+  <p align="center"><img src="/tex/f9c8ab8ce67745dfaf7474d9502b77b7.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
 
-<p align="center"><img src="/tex/fa40a0d636fd317180e831bf13d7648f.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/1f2bc17c3ec0e4ed1a2a7d59e067d096.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
 ## QR Factorization
 
 Any real square matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> may be decomposed as
-<p align="center"><img src="/tex/b31353482d3c7f99aed080c3d6a7a799.svg?invert_in_darkmode&sanitize=true" align=middle width=59.850326249999995pt height=14.42921205pt/></p>
+  <p align="center"><img src="/tex/40bda0f04a6bf0f7d8e43291c2a70293.svg?invert_in_darkmode&sanitize=true" align=middle width=59.850326249999995pt height=14.42921205pt/></p>
 **Definition** with <img src="/tex/1afcdb0f704394b16fe85fb40c45ca7a.svg?invert_in_darkmode&sanitize=true" align=middle width=12.99542474999999pt height=22.465723500000017pt/> as a vector:
 
 where <img src="/tex/1afcdb0f704394b16fe85fb40c45ca7a.svg?invert_in_darkmode&sanitize=true" align=middle width=12.99542474999999pt height=22.465723500000017pt/> is an orthogonal matrix and <img src="/tex/1e438235ef9ec72fc51ac5025516017c.svg?invert_in_darkmode&sanitize=true" align=middle width=12.60847334999999pt height=22.465723500000017pt/> is an upper triangular matrix.
-<p align="center"><img src="/tex/6fbd4573d4f97555024f1429d6d99ca1.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=88.76800184999999pt/></p>
+  <p align="center"><img src="/tex/e9ff62ee9f467ea6e5ecf731adcbafe4.svg?invert_in_darkmode&sanitize=true" align=middle width=370.54959974999997pt height=88.76800184999999pt/></p>
 vectors <img src="/tex/ea4eed098b4de19e35fb622e5df2383a.svg?invert_in_darkmode&sanitize=true" align=middle width=66.70652339999998pt height=14.15524440000002pt/> are orthonormal <img src="/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&sanitize=true" align=middle width=14.433101099999991pt height=14.15524440000002pt/> -vectors:
-<p align="center"><img src="/tex/f4a1a3dcc122e2298c81eaf36bbc575e.svg?invert_in_darkmode&sanitize=true" align=middle width=207.1345716pt height=19.3534671pt/></p>
+  <p align="center"><img src="/tex/51c3dc4e44eaebe952e61a8f38ca2643.svg?invert_in_darkmode&sanitize=true" align=middle width=207.1345716pt height=19.3534671pt/></p>
 **QR factorization solves:**
 
 - linear equations
