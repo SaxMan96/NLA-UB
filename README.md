@@ -82,10 +82,13 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 LU on example:
 - rows operations
   <p align="center"><img src="/tex/9597a32948bfa7e634401626326bb137.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
+  
 - **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
-  <p align="center"><img src="/tex/d32362e79f3e8a18dd897b5b63bf1f80.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/e7b2aea92ebcf4f5bb8234ff87e80cd2.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
+  
 - **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
-  <p align="center"><img src="/tex/919b5f0cbdb0d0b99c866507632a2b04.svg?invert_in_darkmode&sanitize=true" align=middle width=407.76699645pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/8aa5a06883643ef41a04d243e6cec9f3.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
+
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose <img src="/tex/e84705df9be792193f6e243da302768c.svg?invert_in_darkmode&sanitize=true" align=middle width=24.51021539999999pt height=14.15524440000002pt/> and swap that  <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>-th row with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/>-th row `for i in (1,n) `.
