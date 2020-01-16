@@ -80,13 +80,12 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 ## LU Factorization
 
 LU on example:
-
+- rows operations
   <p align="center"><img src="/tex/9597a32948bfa7e634401626326bb137.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
-  **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
+- **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
   <p align="center"><img src="/tex/d32362e79f3e8a18dd897b5b63bf1f80.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
-  **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
-  <p align="center"><img src="/tex/a27a39de21f8bbe41291f5fbcb06574d.svg?invert_in_darkmode&sanitize=true" align=middle width=407.76699645pt height=59.1786591pt/></p>
-
+- **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
+  <p align="center"><img src="/tex/919b5f0cbdb0d0b99c866507632a2b04.svg?invert_in_darkmode&sanitize=true" align=middle width=407.76699645pt height=59.1786591pt/></p>
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose <img src="/tex/e84705df9be792193f6e243da302768c.svg?invert_in_darkmode&sanitize=true" align=middle width=24.51021539999999pt height=14.15524440000002pt/> and swap that  <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>-th row with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/>-th row `for i in (1,n) `.
@@ -114,13 +113,13 @@ Cholesky Algorithm:
 **Example**
 <p align="center"><img src="/tex/380d1e5c3be7ad281dada632823f9b5f.svg?invert_in_darkmode&sanitize=true" align=middle width=193.15087605pt height=59.1786591pt/></p>
 - <img src="/tex/1246fb43a66896c3cdcdfd81957615a8.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-  <p align="center"><img src="/tex/31d368e031b6e1c1af5427239ba6ae4d.svg?invert_in_darkmode&sanitize=true" align=middle width=276.2605362pt height=98.8387554pt/></p>
+<p align="center"><img src="/tex/679fdcd6f8fcd870707846b6e84ee99a.svg?invert_in_darkmode&sanitize=true" align=middle width=276.2605362pt height=98.8387554pt/></p>
 - <img src="/tex/0913491f80945049ed061e8767a50fe3.svg?invert_in_darkmode&sanitize=true" align=middle width=44.93238914999999pt height=21.68300969999999pt/>
-  <p align="center"><img src="/tex/c703f5243962228b4fadab5f8656e219.svg?invert_in_darkmode&sanitize=true" align=middle width=544.1757419999999pt height=59.1786591pt/></p>
+<p align="center"><img src="/tex/49b01ce4c91b6fb26dc55b4c2b717b67.svg?invert_in_darkmode&sanitize=true" align=middle width=544.1757419999999pt height=59.1786591pt/></p>
 - <img src="/tex/b8fe7a8f30cfdea91cd4bb99033d6e21.svg?invert_in_darkmode&sanitize=true" align=middle width=35.80006649999999pt height=21.68300969999999pt/>
-  <p align="center"><img src="/tex/f9c8ab8ce67745dfaf7474d9502b77b7.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
+<p align="center"><img src="/tex/b6dbc11f79b366f3a10fd2ab594b1728.svg?invert_in_darkmode&sanitize=true" align=middle width=205.68667514999999pt height=111.27665505pt/></p>
 
-  <p align="center"><img src="/tex/1f2bc17c3ec0e4ed1a2a7d59e067d096.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
+<p align="center"><img src="/tex/fa40a0d636fd317180e831bf13d7648f.svg?invert_in_darkmode&sanitize=true" align=middle width=313.09534245pt height=59.1786591pt/></p>
 ## QR Factorization
 
 Any real square matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> may be decomposed as
