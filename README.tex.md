@@ -185,20 +185,19 @@ To use this to solve a general system $A x=b$ we need the following matrix facto
 ## LU Factorization
 
 LU on example:
-
+- rows operations
   $$
   A = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ { - 2 } & { 8 } & { 5 } \\ { 3 } & { 4 } & { 7 } \end{array} \right] \begin{matrix}\\\textbf{2}R_{1}+R_{2}\\\textbf{-3}R_{1}+R_{2}\end{matrix} \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { ? } & { 1 } & { 0 } \\ { ? } & { ? } & { 1 } \end{array} \right]
   $$
-  **2** and **-3** goes down to $L$ with changed sign
+- **2** and **-3** goes down to $L$ with changed sign
   $$
   U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { -8 } & { 16 } \end{array} \right] \begin{matrix}\\ \\\textbf{0.5}R_{2}+R_{3}\end{matrix} \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { ? } & { 1 } \end{array} \right]
   $$
-  **0.5** goes to $L$ with minus sign.
+- **0.5** goes to $L$ with minus sign.
   $$
   U = \left[ \begin{array} { r r r } { 1 } & { 4 } & { - 3 } \\ {0 } & { 16 } & { -1 } \\ { 0 } & { 0 } & { 15.5 } \end{array} \right] \quad L = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { - 2 } & { 1 } & { 0 } \\ { 3 } & { -0.5 } & { 1 } \end{array} \right]
   A = LU
-  $$
-
+$$
 ## Gaussian Elimination
 
 **Partial Pivoting** - Sort rows by its first elements absolute value. Choose $a_{i,k}$ and swap that  $k$-th row with $i$-th row `for i in (1,n) `.
@@ -238,30 +237,30 @@ $$
   \end{array}\right]
 $$
 - $i = 1:$
-  $$
+$$
   \begin{aligned}
     & l_{1,1} = \sqrt{a_{1,1}} = 2 \\
     & l_{2,1} = \frac{a_{2,1}}{l_{1,1}} = 6 \\
     & l_{3,1} = \frac{a_{3,1}}{l_{1,1}} = -8
     \end{aligned} \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { ? } & { 0 } \\ { - 8 } & { ? } & { ? } \end{array} \right]
-  $$
+$$
 - $i = 2:$
-  $$
+$$
   \begin{aligned}
     & { l _ { 2,2 } = \sqrt { a _ { 2,2 } -  l _ { 2,1 } ^ { 2 }} }  = \sqrt{37 - 6^{2}} = 1\\ 
     & { l_ { 3,2 } = \left( a _ { 3,2 } - l _ { 2 , 1 } \cdot l _ { 3,1 } \right) / l _ { 2,2 } } = (- 43 - (6 \cdot (- 8))/1 = 5 \end{aligned}
      \quad L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { ? } \end{array} \right] 
-  $$
+$$
 - $i = 3$
-  $$
+$$
   \begin{aligned} 
   l _ { 3,3 } & = \sqrt { a _ { 3,3 } - \left( l _ { 3,1 } ^ { 2 } + l _ { 3,2 } ^ { 2 } \right) } = \\ & = \sqrt { 98 - \left( ( - 8 ) ^ { 2 } + 5 ^ { 2 } \right) } = \\ & = \sqrt { 98 - ( 64 + 25 ) } = \\ & = \sqrt { 98 - 89 } = \sqrt { 9 } = 3 \end{aligned}
-  $$
+$$
 
-  $$
+$$
   L = \left[ \begin{array} { r r r } { 2 } & { 0 } & { 0 } \\ { 6 } & { 1 } & { 0 } \\ { - 8 } & { 5 } & { 3 } \end{array} \right]
 \quad L^{T} = \left[ \begin{array} { r r r } { 2 } & { 6 } & { -8 } \\ { 0 } & { 1 } & { 5 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] 
-  $$
+$$
 ## QR Factorization
 
 Any real square matrix $A$ may be decomposed as
