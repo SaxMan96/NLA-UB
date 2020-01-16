@@ -65,7 +65,7 @@
 
 A factorization of the matrix <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is a representation of <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> as a product of several "simpler" matrices, which make the problem at hand easier to solve. We give two examples.
 
-<p align="center"><img src="/tex/a538e772530ff07b8bc8f1a7de83aba9.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
+<p align="center"><img src="/tex/9787be69dfb013bed79ce86d68d3f010.svg?invert_in_darkmode&sanitize=true" align=middle width=316.7069796pt height=88.76800184999999pt/></p>
 
 - Forward Substitution
 
@@ -80,11 +80,11 @@ To use this to solve a general system <img src="/tex/594efbce3e38e300428e85e0bda
 ## LU Factorization
 
 LU on example:
-<p align="center"><img src="/tex/ce2b2f16485db094ca7afcbf5d48e8af.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
-**2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
-<p align="center"><img src="/tex/eab43629b44054198bbc9c76abd17b9f.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/9597a32948bfa7e634401626326bb137.svg?invert_in_darkmode&sanitize=true" align=middle width=379.437696pt height=59.1786591pt/></p>
+  **2** and **-3** goes down to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with changed sign
+  <p align="center"><img src="/tex/03612aeca755181f26217611944e31b7.svg?invert_in_darkmode&sanitize=true" align=middle width=401.3120463pt height=59.1786591pt/></p>
   **0.5** goes to <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> with minus sign.
-<p align="center"><img src="/tex/5c5dacc34cf2bc4804fcdd2422f1632e.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
+  <p align="center"><img src="/tex/8aa5a06883643ef41a04d243e6cec9f3.svg?invert_in_darkmode&sanitize=true" align=middle width=346.5777084pt height=59.1786591pt/></p>
 
 <p align="center"><img src="/tex/83f43c59f11b38d5b79f92e81182ec20.svg?invert_in_darkmode&sanitize=true" align=middle width=58.44963299999999pt height=11.232861749999998pt/></p>
 ## Gaussian Elimination
