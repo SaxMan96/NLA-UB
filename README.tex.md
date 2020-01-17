@@ -59,10 +59,9 @@ $M \text { positive definite } \Longleftrightarrow x^{\top} M x>0 \text { for al
 The rank of a matrix is defined as 
 
   - the maximum number of linearly independent column vectors in the matrix or 
-
   - the maximum number of linearly independent row vectors in the matrix. 
 
-    Both definitions are equivalent.
+Both definitions are equivalent.
 
 ## Eigenvalues and eigenvectors
 
