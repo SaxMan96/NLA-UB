@@ -180,12 +180,6 @@ A matrix <img src="/tex/599284dd994b567ae189139c514c7fc0.svg?invert_in_darkmode&
 
 Algorithm
 
-
-
-
-
-
-
 # Singular value decomposition (SVD)
 
 # Jacobi method (iterative scheme)
