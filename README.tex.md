@@ -466,11 +466,6 @@ and the eigenvalues of $T$ are:
 $\lambda_{1}=-1, \lambda_{2}=3-\sqrt{13}=-0.60555 \ldots . \lambda_{3}=3+\sqrt{13}=6.6055 \ldots$
 
 
-
-
-
-
-
 # Singular value decomposition (SVD)
 
 # Jacobi method (iterative scheme)
